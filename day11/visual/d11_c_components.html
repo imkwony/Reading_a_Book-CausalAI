@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.two{display:grid;grid-template-columns:1.15fr 1fr;gap:14px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">c-component: 양방향 화살표로만 이어진 변수 무리<small>정의 4.4.4 (4.4.1.2절, 그림 4.37(d), 그림 4.38(a))</small></div>
+<div class="two">
+<div class="card purple"><span class="tag">그림 4.37(d): 다섯 변수</span><svg xmlns="http://www.w3.org/2000/svg" width="540" height="150" viewBox="0 0 540 150" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M72.0,70.0 L125.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M179.0,70.0 L232.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M286.0,70.0 L339.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M393.0,70.0 L446.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M69.3,58.2 Q152.0,18.0 234.7,58.2" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M283.3,58.2 Q366.0,18.0 448.7,58.2" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M176.5,81.4 Q259.0,120.0 341.5,81.4" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="45" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="45" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₁</text>
+<circle cx="152" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="152" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">V₂</text>
+<circle cx="259" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="259" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₃</text>
+<circle cx="366" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="366" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">V₄</text>
+<circle cx="473" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="473" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₅</text>
+</svg>
+<p><b style="color:#0e6655">{V₁,V₃,V₅}</b> (U₁, U₂로 연결) · <b style="color:#1a5276">{V₂,V₄}</b> (U₃로 연결)</p>
+<p class="eq" style="font-size:21px">Q[V] = Q[V₁,V₃,V₅] · Q[V₂,V₄]</p></div>
+<div class="card purple"><span class="tag">그림 4.38(a): 냅킨 그래프</span><svg xmlns="http://www.w3.org/2000/svg" width="420" height="250" viewBox="0 0 420 250" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M189.1,53.6 L140.9,96.4" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M102.5,136.9 L57.5,193.1" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M68.0,215.0 L352.0,215.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M185.0,47.6 Q92.3,94.1 51.1,189.3" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M235.0,47.6 Q327.7,94.1 368.9,189.3" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="210" cy="35" r="22" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="210" y="42.7" text-anchor="middle" font-size="22" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">W</text>
+<circle cx="120" cy="115" r="22" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="120" y="122.7" text-anchor="middle" font-size="22" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="40" cy="215" r="22" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="222.7" text-anchor="middle" font-size="22" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="380" cy="215" r="22" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="380" y="222.7" text-anchor="middle" font-size="22" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg>
+<p><b style="color:#0e6655">{W,X,Y}</b> · <b style="color:#1a5276">{Z}</b></p>
+<p class="eq" style="font-size:21px">Q[V] = Q[W,X,Y] · Q[Z]</p></div>
+</div>
+<div class="row"><div class="card green grow"><span class="tag">읽는 법</span><p>화살표(→)는 무시하고 <b>점선 양방향 화살표만</b> 따라 갈 수 있는 변수끼리 같은 c-component</p></div>
+<div class="card orange grow"><span class="tag">주의</span><p>무리 안에서는 변수들이 서로 얽혀 쪼갤 수 없다. 무리 사이에서만 δ로 쪼갠다</p></div></div>
+</div></body></html>

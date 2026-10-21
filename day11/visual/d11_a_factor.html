@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">숨은 교란이 늘수록 곱 분해가 거칠어진다<small>그림 4.37(a), (b), (d)와 식 4.158–4.166. 같은 색 = 같은 덩어리 (그림 4.37(c)는 생략)</small></div>
+<div class="row" style="align-items:center"><div class="card blue" style="width:540px;padding:8px 10px;gap:2px"><span class="tag">(a) 숨은 변수 없음 (마코프)</span><svg xmlns="http://www.w3.org/2000/svg" width="520" height="130" viewBox="0 0 520 130" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M72.0,70.0 L125.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M179.0,70.0 L232.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M286.0,70.0 L339.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M393.0,70.0 L446.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="45" cy="70" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="45" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₁</text>
+<circle cx="152" cy="70" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="152" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₂</text>
+<circle cx="259" cy="70" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="259" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₃</text>
+<circle cx="366" cy="70" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="366" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₄</text>
+<circle cx="473" cy="70" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="473" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₅</text>
+</svg></div>
+<div class="card gray grow" style="padding:10px 14px;gap:6px;height:100%"><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="eq" style="background:#fff;border:3px solid #555;border-radius:10px;padding:3px 10px;font-size:21px">P(v₁)</span><span class="eq" style="background:#fff;border:3px solid #555;border-radius:10px;padding:3px 10px;font-size:21px">P(v₂∣v₁)</span><span class="eq" style="background:#fff;border:3px solid #555;border-radius:10px;padding:3px 10px;font-size:21px">P(v₃∣v₂)</span><span class="eq" style="background:#fff;border:3px solid #555;border-radius:10px;padding:3px 10px;font-size:21px">P(v₄∣v₃)</span><span class="eq" style="background:#fff;border:3px solid #555;border-radius:10px;padding:3px 10px;font-size:21px">P(v₅∣v₄)</span></div><p class="sub">다섯 변수가 각자 하나의 조각 — 모두 곱으로 풀린다 (식 4.158)</p></div></div><div class="row" style="align-items:center"><div class="card purple" style="width:540px;padding:8px 10px;gap:2px"><span class="tag">(b) U₁ 추가: V₁ ⇠⇢ V₃</span><svg xmlns="http://www.w3.org/2000/svg" width="520" height="130" viewBox="0 0 520 130" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M72.0,70.0 L125.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M179.0,70.0 L232.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M286.0,70.0 L339.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M393.0,70.0 L446.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M69.3,58.2 Q152.0,18.0 234.7,58.2" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="45" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="45" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₁</text>
+<circle cx="152" cy="70" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="152" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₂</text>
+<circle cx="259" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="259" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₃</text>
+<circle cx="366" cy="70" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="366" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₄</text>
+<circle cx="473" cy="70" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="473" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₅</text>
+</svg></div>
+<div class="card gray grow" style="padding:10px 14px;gap:6px;height:100%"><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="eq" style="background:#fff;border:3px solid #555;border-radius:10px;padding:3px 10px;font-size:21px">P(v₂∣v₁)</span><span class="eq" style="background:#fff;border:3px solid #555;border-radius:10px;padding:3px 10px;font-size:21px">P(v₄∣v₃)</span><span class="eq" style="background:#fff;border:3px solid #555;border-radius:10px;padding:3px 10px;font-size:21px">P(v₅∣v₄)</span><span class="eq" style="background:#e8f6f3;border:3px solid #0e6655;border-radius:10px;padding:3px 10px;font-size:21px">Σ<sub>u₁</sub> P(v₁∣u₁)P(v₃∣v₂,u₁)P(u₁)</span></div><p class="sub">V₁과 V₃는 U₁을 합친 하나의 덩어리. P(v₁)P(v₃∣v₂)로 쪼갤 수 없다 (식 4.160)</p></div></div><div class="row" style="align-items:center"><div class="card purple" style="width:540px;padding:8px 10px;gap:2px"><span class="tag">(d) U₁, U₂, U₃ 모두</span><svg xmlns="http://www.w3.org/2000/svg" width="520" height="130" viewBox="0 0 520 130" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M72.0,70.0 L125.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M179.0,70.0 L232.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M286.0,70.0 L339.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M393.0,70.0 L446.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M69.3,58.2 Q152.0,18.0 234.7,58.2" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M283.3,58.2 Q366.0,18.0 448.7,58.2" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M176.5,81.4 Q259.0,120.0 341.5,81.4" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="45" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="45" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₁</text>
+<circle cx="152" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="152" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">V₂</text>
+<circle cx="259" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="259" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₃</text>
+<circle cx="366" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="366" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">V₄</text>
+<circle cx="473" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="473" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₅</text>
+</svg></div>
+<div class="card gray grow" style="padding:10px 14px;gap:6px;height:100%"><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="eq" style="background:#eaf2f8;border:3px solid #1a5276;border-radius:10px;padding:3px 10px;font-size:21px">Σ<sub>u₃</sub> P(u₃)P(v₂∣v₁,u₃)P(v₄∣v₃,u₃)</span><span class="eq" style="background:#e8f6f3;border:3px solid #0e6655;border-radius:10px;padding:3px 10px;font-size:21px">Σ<sub>u₁,u₂</sub> P(u₁,u₂)P(v₁∣u₁)P(v₃∣v₂,u₁,u₂)P(v₅∣v₄,u₂)</span></div><p class="sub">조각이 두 개로 거칠어졌다. 이 덩어리가 곧 c-factor Q[V₂,V₄]와 Q[V₁,V₃,V₅] (식 4.164, 4.166)</p></div></div>
+<div class="banner warn">숨은 변수 하나가 두 변수에 걸리면, 그 둘은 개별 인자 P(v∣부모)로 분리되지 않고 한 묶음으로만 쓸 수 있다</div>
+</div></body></html>

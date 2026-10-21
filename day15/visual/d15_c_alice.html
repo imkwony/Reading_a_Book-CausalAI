@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.steps{display:grid;grid-template-columns:1fr 36px 1fr 36px 1fr;align-items:stretch}.card .eq{font-size:21px}.card p{font-size:21px}.bot{display:grid;grid-template-columns:1fr 1fr;gap:16px}.big{font-size:34px;font-weight:800}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">반사실 계산의 세 단계: 예 5.2의 Alice<small>"Alice가 대학에 갔다면 연봉은?" S<sub>ED=1</sub>(Alice) · Thm 5.2.1 이후의 3단계, 식 5.37–5.46</small></div>
+<div class="steps">
+<div class="card blue"><span class="tag">① 관측해서 U 추정</span><p class="sub">abduction</p><p>Alice는 ED=0, EX=6, S=81,000</p><p class="eq">U<sub>ed</sub>=0, U<sub>ex</sub>=6−10=−4<br>U<sub>s</sub>=81,000−65,000−15,000=1,000</p></div>
+<div class="arrow">→</div>
+<div class="card teal"><span class="tag">② 메커니즘 수정</span><p class="sub">intervention</p><p>f<sub>ED</sub>를 상수 1로 바꾼 모델 (do(ED=1))</p><p class="eq">U는 그대로 유지</p></div>
+<div class="arrow">→</div>
+<div class="card wine"><span class="tag">③ 새 모델에서 계산</span><p class="sub">evaluation</p><p class="eq">EX<sub>ED=1</sub> = 10−4(1)+(−4) = 2<br>S<sub>ED=1</sub> = 65,000+2,500(2)+5,000(1)+1,000 = 76,000</p></div>
+</div>
+<div class="bot">
+<div class="card purple"><span class="tag">가정한 SCM (식 5.34–5.36)</span><div style="display:flex;align-items:center;gap:6px"><div style="flex:0 0 300px"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="190" viewBox="0 0 300 190" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M71.5,126.3 L128.5,63.7" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M171.5,63.7 L228.5,126.3" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M82.0,150.0 L218.0,150.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="50" cy="150" r="26" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="50" y="157.7" text-anchor="middle" font-size="22" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">ED</text>
+<circle cx="150" cy="40" r="26" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="150" y="47.7" text-anchor="middle" font-size="22" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">EX</text>
+<circle cx="250" cy="150" r="26" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="250" y="157.7" text-anchor="middle" font-size="22" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">S</text>
+</svg></div><p class="eq" style="font-size:20px">ED = U<sub>ed</sub><br>EX = 10 − 4ED + U<sub>ex</sub><br>S = 65,000 + 2,500EX + 5,000ED + U<sub>s</sub></p></div><p class="sub">교육이 늘면 경력이 줄어드는 ED→EX 화살표가 핵심</p></div>
+<div class="card orange"><span class="tag">회귀로 계산하면?</span><p class="eq">Ŝ = 65,000 + 2,500(6) + 5,000(1) = 85,000</p><p>경력을 6으로 고정한 채 교육만 바꾼 값. 실제로는 경력이 2로 줄어든다</p><p class="big" style="color:var(--wine)">76,000 ≠ 85,000</p><p class="sub">Alice 한 사람에게 9,000의 차이</p></div>
+</div>
+</div></body></html>

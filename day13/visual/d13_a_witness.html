@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.grid{display:grid;grid-template-columns:1fr 60px 1fr;gap:12px;align-items:center}.grid .col{gap:14px}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">비식별을 보이는 방법: 증인 모델 두 개<small>같은 그래프, 같은 관측 분포, 다른 개입 분포 (Def 4.2.1의 부정, 4.5.1절)</small></div>
+<div class="grid">
+<div class="col">
+<div class="card purple"><span class="tag">SCM M₁ (그래프 G 호환)</span><p class="eq">F₁, P₁(U)</p><p class="sub">진짜 세계가 될 수 있는 후보 1</p></div>
+<div class="card purple"><span class="tag">SCM M₂ (그래프 G 호환)</span><p class="eq">F₂, P₂(U)</p><p class="sub">진짜 세계가 될 수 있는 후보 2</p></div>
+</div>
+<div class="arrow">→</div>
+<div class="col">
+<div class="card blue"><span class="tag">L1 관측</span><p class="eq">P₁(V) = P₂(V)</p><p class="sub">데이터로는 두 후보를 구별할 수 없다</p></div>
+<div class="card teal"><span class="tag">L2 개입</span><p class="eq">P₁(y∣do(x)) ≠ P₂(y∣do(x))</p><p class="sub">그런데 개입하면 답이 갈린다</p></div>
+</div></div>
+<div class="two">
+<div class="card green"><span class="tag">식별 가능</span><p>그래프와 P(V)에 맞는 <b>모든</b> 모델이 같은 개입 분포를 낸다 (∀)</p></div>
+<div class="card orange"><span class="tag">식별 불가</span><p>어긋나는 모델 <b>한 쌍</b>이 존재한다 (∃). 한 쌍이면 충분하다</p></div>
+</div>
+<div class="banner dark">관측 분포가 같은데 효과가 다른 두 모델이 존재함을 보이면 비식별성 증명이 끝난다</div>
+</div></body></html>

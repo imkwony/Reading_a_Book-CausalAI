@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.t2{width:100%;border-collapse:collapse}.t2 th{font-size:20px;padding:7px 8px;background:var(--dark);color:#fff}.t2 td{font-size:21px;font-weight:700;padding:7px 8px;border-bottom:2px solid #ddd;text-align:center}.t2 td.l{text-align:left;color:var(--gray);font-weight:600}.hl{background:var(--orange-bg);color:var(--orange)}.top{display:grid;grid-template-columns:260px 1fr;gap:16px;align-items:center}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">활 그래프(bow)에서 만든 증인 모델 쌍<small>X→Y와 숨은 교란 X↔Y만 있는 그래프 (그림 4.60, 예 4.22와 4.23)</small></div>
+<div class="top"><div class="card purple"><span class="tag">bow 그래프</span><svg xmlns="http://www.w3.org/2000/svg" width="240" height="120" viewBox="0 0 240 120" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M56.0,75.0 L184.0,75.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M54.7,66.8 Q120.0,45.0 185.3,66.8" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="30" cy="75" r="20" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="30" y="82.0" text-anchor="middle" font-size="20" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="210" cy="75" r="20" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="210" y="82.0" text-anchor="middle" font-size="20" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg></div>
+<div class="card gray"><p>보기(P(V))는 같게, 하기(do)는 다르게 만드는 것이 목표. 두 예 모두 <b>관측 세계에서는 X가 숨은 U와 똑같이 움직이는 것</b>을 이용한다</p></div></div>
+<div class="two">
+<div class="card teal" style="padding:12px 14px"><span class="tag">예 4.22 (xor)</span>
+<table class="t2"><tr><th></th><th>M₁</th><th>M₂</th></tr>
+<tr><td class="l">X의 함수</td><td>X ← U</td><td>X ← U</td></tr>
+<tr><td class="l">Y의 함수</td><td>Y ← X⊕U</td><td>Y ← 0</td></tr>
+<tr><td class="l">관측 P(Y=1)</td><td>0</td><td>0</td></tr>
+<tr><td class="l hl">P(Y=1∣do(X=0))</td><td class="hl">1/2</td><td class="hl">0</td></tr>
+<tr><td class="l hl">P(Y=1∣do(X=1))</td><td class="hl">1/2</td><td class="hl">1</td></tr></table>
+<p class="sub">M₁에서는 X=U라서 X⊕U가 항상 0. 개입으로 X가 U에서 풀려나면 Y가 U를 따라간다</p></div>
+<div class="card wine" style="padding:12px 14px"><span class="tag">예 4.23 (선택자)</span>
+<table class="t2"><tr><th></th><th>M₁</th><th>M₂</th></tr>
+<tr><td class="l">공통 부분</td><td colspan="2">X가 U<sub>y1</sub>, U<sub>y0</sub> 중 하나를 선택</td></tr>
+<tr><td class="l">추가 항</td><td>(U⊕X)</td><td>(U⊕X)∧U<sub>y1</sub></td></tr>
+<tr><td class="l">관측에서 추가 항</td><td>0</td><td>0</td></tr>
+<tr><td class="l hl">P(Y=0∣do(X=1))</td><td class="hl">3/8</td><td class="hl">3/4</td></tr>
+<tr><td class="l hl">P(Y=1∣do(X=1))</td><td class="hl">5/8</td><td class="hl">1/4</td></tr></table>
+<p class="sub">두 인자 모두 쓰는 함수로도 같은 구조를 만들 수 있다</p></div>
+</div>
+<div class="banner warn">예 4.22는 확률 0인 사건이 있어 양성(positivity) 가정을 어긴다. 핵심 구조는 다른 무작위성을 더해도 유지된다 (연습문제 4.15)</div>
+</div></body></html>

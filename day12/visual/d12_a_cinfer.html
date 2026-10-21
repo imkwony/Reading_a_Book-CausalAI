@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">C-INFER: 네 단계로 질의를 자료에서 계산한다<small>4.4.3절, 알고리즘 5–7. 입력 ⟨Q, P, G∗⟩ → 출력: Q를 P의 함수로 쓴 식 또는 FAIL</small></div>
+<div class="banner dark" style="background:#fff;color:#111;border:3px solid #555">입력: 질의 Q = P(y∣do(x)) · 자료 P (관측 P(V), 실험 P(V∣do(z)) …) · 그래프 G</div>
+<div class="row">
+<div class="card teal" style="padding:12px 14px;gap:6px;flex:1"><span class="tag">STEP 1</span><h3>q-tree 만들기</h3><p class="eq" style="font-size:20px">GenQueryTree (알고리즘 3)</p><p style="font-size:20px">질의를 c-factor 잎들로 쪼갠다. "무엇이 필요한가"의 목록</p></div><div class="arrow">→</div>
+<div class="card blue" style="padding:12px 14px;gap:6px;flex:1"><span class="tag">STEP 2</span><h3>d-tree 만들기</h3><p class="eq" style="font-size:20px">GenInputTree (알고리즘 4)</p><p style="font-size:20px">자료마다 뿌리 Q[V]에서 σ→Σ→δ 순으로 확장. "무엇을 가졌나"</p></div><div class="arrow">→</div>
+<div class="card green" style="padding:12px 14px;gap:6px;flex:1"><span class="tag">STEP 3</span><h3>잎 맞추기</h3><p class="eq" style="font-size:20px">MapFactors (알고리즘 6)</p><p style="font-size:20px">q-tree의 각 잎을 어느 d-tree의 노드와 연결. 개입 변수의 잎은 지표함수 1[x′=x]</p></div><div class="arrow">→</div>
+<div class="card purple" style="padding:12px 14px;gap:6px;flex:1"><span class="tag">STEP 4</span><h3>식으로 합성</h3><p class="eq" style="font-size:20px">ComposeQuery (알고리즘 7)</p><p style="font-size:20px">뿌리→잎 경로의 함수를 이어 붙이고 Σ<sub>d∖y</sub>로 마무리</p></div>
+</div>
+<div class="row">
+<div class="card orange grow"><span class="tag">분기: 잎 하나라도 짝이 없으면</span><p>3단계에서 μ(Q[D<sub>j</sub>]) = ∅인 잎이 있으면 <b>FAIL</b> (알고리즘 5의 6–7행). Thm 4.4.4·4.4.5: 이 FAIL이 곧 식별 불가</p></div>
+<div class="card green grow"><span class="tag">성공이면</span><p>출력은 관측·실험 분포만의 식. 규칙의 순서를 사람이 고르지 않아도 되고, 시간은 O(n²(n+m)) (n=변수 수, m=간선 수)</p></div>
+</div>
+</div></body></html>

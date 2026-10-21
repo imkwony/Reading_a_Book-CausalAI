@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.two .col{gap:10px}.two .card{padding:10px 14px;gap:4px}.two .card p{font-size:20px}.two h3{font-size:24px}.rowc{display:flex;gap:10px;align-items:center}.rowc svg{width:170px;height:auto;flex:none}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">비식별 증명 도구 지도 (그림 4.59)<small>그래프 전략으로 출발점을 잡고, 확장 전략으로 다른 그래프·쿼리로 넓힌다</small></div>
+<div class="two">
+<div class="col"><div class="card blue"><h3>(a) 그래프 전략: 출발점</h3></div>
+<div class="card blue"><span class="tag">bow 그래프</span><div class="rowc"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M57.0,50.0 L143.0,50.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M55.0,40.8 Q100.0,20.0 145.0,40.8" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="35" cy="50" r="16" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="35" y="55.6" text-anchor="middle" font-size="16" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="165" cy="50" r="16" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="165" y="55.6" text-anchor="middle" font-size="16" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg><p>X→Y와 X↔Y. 증인 모델 쌍을 직접 구성 (4.5.1절)</p></div></div>
+<div class="card blue"><span class="tag">결합 개입 (Lemma 4.5.1)</span><div class="rowc"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="110" viewBox="0 0 200 110" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M57.0,35.0 L143.0,35.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M55.0,25.8 Q100.0,5.0 145.0,25.8" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M35.0,57.0 L35.0,63.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="35" cy="35" r="16" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="35" y="40.6" text-anchor="middle" font-size="16" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="165" cy="35" r="16" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="165" y="40.6" text-anchor="middle" font-size="16" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+<circle cx="35" cy="85" r="16" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="35" y="90.6" text-anchor="middle" font-size="16" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+</svg><p>X와 그 자식을 잇는 양방향 경로가 있으면 P(V∣do(x)) 비식별</p></div></div>
+<div class="card blue"><span class="tag">비식별 부분그래프 (Lemma 4.5.6)</span><p>V∖Y가 모두 Y의 조상이고 V가 하나의 c-성분이면 비식별</p></div>
+<div class="card blue"><span class="tag">다중 분포 (Lemma 4.5.7)</span><p>관측 외에 실험 분포 {P(V∣do(Z))}가 있어도 세 조건 중 하나씩 걸리면 비식별</p></div>
+</div>
+<div class="col"><div class="card teal"><h3>(b) 확장 전략: 넓히기</h3></div>
+<div class="card teal"><span class="tag">그래프-부분그래프 (4.5.2)</span><p>화살표를 <b>더하면</b> 비식별 유지, <b>빼면</b> 식별 유지</p></div>
+<div class="card teal"><span class="tag">처치 확장 (4.5.3)</span><p>do(x′)가 비식별이면 do(x)도 비식별 (X∖X′에서 X′로 가는 경로 없음)</p></div>
+<div class="card teal"><span class="tag">결과 확장 (4.5.4)</span><p>P(y′∣do(x))가 비식별이면 y를 늘린 P(y∣do(x))도 비식별</p></div>
+<div class="card teal"><span class="tag">매핑 확장 (4.5.5)</span><p>A가 X 밖에서 Y로 이어지는 조상이고 P(a∣do(x))가 비식별이면 P(y∣do(x))도 비식별</p></div>
+</div></div>
+<div class="banner dark">비식별 결론 = 그래프 전략 1개 + 확장 전략 0회 이상 (4.5.6절)</div>
+</div></body></html>

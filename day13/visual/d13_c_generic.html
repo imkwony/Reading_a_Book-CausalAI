@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.two{display:grid;grid-template-columns:1fr 470px;gap:16px}.two .card p{font-size:21px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">두 가지 일반적인 증인 만들기: 임의의 모델에서, 그리고 선형 가우시안에서<small>예 4.24 (기준 모델 M에서 출발)와 예 4.25 (연속 변수, 식 4.256–4.263)</small></div>
+<div class="two">
+<div class="col" style="gap:12px">
+<div class="card wine"><span class="tag">예 4.24 · 기준 모델 M에서 만들기</span>
+<p><b>관측 세계</b>에서는 X=U이므로 원래 함수 f<sub>Y</sub>를 그대로 쓴다</p>
+<p><b>X≠U인 영역</b> (관측에서 일어나지 않는 곳)에서만 M⁽¹⁾은 Y←0, M⁽²⁾은 Y←1로 채운다</p>
+<p class="eq">P⁽ⁱ⁾(y∣do(x)) = P(y∣x)P(x) + 1[…](1−P(x))</p>
+<p class="sub">관측 분포 P(V)는 어떤 것이든 그대로 보존하는 반례를 만들 수 있다</p></div>
+<div class="card teal"><span class="tag">예 4.25 · 선형 가우시안</span>
+<p class="eq">X ← U<sub>x</sub>, Y ← λX + U<sub>y</sub></p>
+<p>관측 공분산 σ<sub>xy</sub> = λ + u<sub>xy</sub> 하나로는 λ를 못 가른다. 합이 같은 (λ, u<sub>xy</sub>) 쌍은 무수히 많다</p></div>
+</div>
+<div class="card blue"><span class="tag">같은 관측 · 다른 효과</span><svg xmlns="http://www.w3.org/2000/svg" width="440" height="340" viewBox="0 0 440 340" style="display:block;margin:0 auto"><line x1="60" y1="285" x2="325" y2="285" stroke="#555" stroke-width="2.5"/><line x1="60" y1="285" x2="60" y2="20" stroke="#555" stroke-width="2.5"/><text x="325" y="337" font-size="22" font-weight="800" fill="#0e6655" font-family="Times New Roman,serif" text-anchor="end">λ (X→Y 효과)</text><text x="74" y="22" font-size="22" font-weight="800" fill="#7a4e9c" font-family="Times New Roman,serif" text-anchor="start">u<tspan font-size="16" dy="5">xy</tspan><tspan dy="-5"> (숨은 교란)</tspan></text><line x1="60" y1="40" x2="305" y2="285" stroke="#1a5276" stroke-width="4"/><text x="434" y="128.5" font-size="21" font-weight="800" fill="#1a5276" text-anchor="end" font-family="Noto Sans CJK KR,sans-serif">λ+u 일정</text><text x="434" y="152.5" font-size="21" font-weight="800" fill="#1a5276" text-anchor="end" font-family="Noto Sans CJK KR,sans-serif">(관측 공분산 같음)</text><circle cx="109.0" cy="89.0" r="11" fill="#8a1538"/><text x="89.0" y="59.0" font-size="24" font-weight="800" fill="#8a1538" font-family="Times New Roman,serif">M₁</text><circle cx="231.5" cy="211.5" r="11" fill="#d35400"/><text x="243.5" y="181.5" font-size="24" font-weight="800" fill="#d35400" font-family="Times New Roman,serif">M₂</text><line x1="109.0" y1="285" x2="109.0" y2="89.0" stroke="#8a1538" stroke-width="2" stroke-dasharray="5 5"/><line x1="231.5" y1="285" x2="231.5" y2="211.5" stroke="#d35400" stroke-width="2" stroke-dasharray="5 5"/><text x="109.0" y="307" font-size="20" font-weight="800" fill="#8a1538" text-anchor="middle">λ⁽¹⁾</text><text x="231.5" y="307" font-size="20" font-weight="800" fill="#d35400" text-anchor="middle">λ⁽²⁾</text></svg><p class="sub" style="text-align:center">do(x) 아래에서 X→Y 효과는 λ 자체이므로 두 점의 효과가 다르다</p></div>
+</div>
+<div class="banner dark">식별 불가 = 데이터가 정하는 것은 선 위의 한 점이 아니라 <b>선 전체</b>(합)뿐</div>
+</div></body></html>

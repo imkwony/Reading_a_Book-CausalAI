@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.brow{display:grid;grid-template-columns:62px 1fr 56px;align-items:center;gap:8px;font-size:21px;font-weight:700}.track{background:#e4e4e4;height:28px;border-radius:6px;overflow:hidden}.fill{height:100%}.grp{font-size:20px;font-weight:700;color:var(--gray);margin-top:4px}.verdict{font-size:21px;font-weight:800;margin-top:2px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">같은 모델, 세 층의 답이 엇갈린다<small>예 5.1 (MD 대 AI 의사): 생존 확률 P(Y=1) 비교 · 식 5.6, 5.9–5.12, 5.18</small></div>
+<div class="three">
+<div class="card blue"><span class="tag">L1 보기</span><h3>그냥 관측한 생존율</h3><p class="eq">P(Y=1∣X=x)</p>
+<div class="brow"><span>AI</span><div class="track"><div class="fill" style="width:90.0%;background:#1e8449"></div></div><b>0.90</b></div><div class="brow"><span>MD</span><div class="track"><div class="fill" style="width:80.0%;background:#555"></div></div><b>0.80</b></div><p class="verdict" style="color:var(--blue)">AI가 +0.10 높아 보인다</p><p class="sub">환자가 스스로 고른 결과: 예측용 수치</p></div>
+<div class="card teal"><span class="tag">L2 하기</span><h3>전원에게 배정했다면</h3><p class="eq">P(Y<sub>x</sub>=1) = P(Y=1∣do(x))</p>
+<div class="brow"><span>AI</span><div class="track"><div class="fill" style="width:89.0%;background:#1e8449"></div></div><b>0.89</b></div><div class="brow"><span>MD</span><div class="track"><div class="fill" style="width:94.0%;background:#555"></div></div><b>0.94</b></div><p class="verdict" style="color:var(--teal)">MD가 +0.05 높다</p><p class="sub">AI 전면 배정 정책은 오히려 손해</p></div>
+<div class="card wine"><span class="tag">L3 되돌려 보기</span><h3>이미 고른 사람 기준 (ETT)</h3><p class="eq">P(Y<sub>x</sub>=1∣X=x′)</p>
+<p class="grp">AI를 고르려는 환자 (x′=1)</p><div class="brow"><span>AI</span><div class="track"><div class="fill" style="width:90.0%;background:#1e8449"></div></div><b>0.90</b></div><div class="brow"><span>MD</span><div class="track"><div class="fill" style="width:98.0%;background:#555"></div></div><b>0.98</b></div>
+<p class="grp">MD를 고르려는 환자 (x′=0)</p><div class="brow"><span>AI</span><div class="track"><div class="fill" style="width:85.0%;background:#1e8449"></div></div><b>0.85</b></div><div class="brow"><span>MD</span><div class="track"><div class="fill" style="width:80.0%;background:#555"></div></div><b>0.80</b></div>
+<p class="verdict" style="color:var(--wine)">집단마다 우열이 반대</p></div>
+</div>
+<div class="banner warn">최선의 정책: 각 환자가 고르려는 쪽의 반대를 배정 (책의 해석, 식 5.19–5.20). 누구를, 어떤 세계에서 보느냐에 따라 결론이 뒤집힌다</div>
+</div></body></html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.three svg{width:100%;height:auto}.three .card p{font-size:20px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">c-factor를 다루는 세 연산자 (Lemma 4.4.1–4.4.3, 표 4.1)<small>각 연산자는 "이 조건이 그래프에서 확인되면 이 계산이 허락된다"는 형태</small></div>
+<div class="three">
+<div class="card blue" style="padding:12px 14px;gap:6px"><span class="tag" style="font-size:24px">Σ 연산자</span><h3>합쳐서 덜어내기 (marginalization)</h3>
+<p style="font-size:20px"><b>조건</b>: T를 C와 C′로 나눴을 때 C′에서 C로 가는 <b>화살표가 없다</b></p><div style="background:#fff;border-radius:10px;padding:2px"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="130" viewBox="0 0 300 130" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M67.0,60.0 L123.0,60.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M177.0,60.0 L233.0,60.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M65.4,50.8 Q150.0,20.0 234.6,50.8" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="40" cy="60" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="40" y="67.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₁</text>
+<circle cx="150" cy="60" r="21" fill="#fff" stroke="#555" stroke-width="3"/>
+<text x="150" y="67.35" text-anchor="middle" font-size="21" font-weight="800" fill="#555" font-family="Times New Roman,Noto Serif CJK KR,serif">V₂</text>
+<circle cx="260" cy="60" r="21" fill="#fdf4e3" stroke="#d35400" stroke-width="3"/>
+<text x="260" y="67.35" text-anchor="middle" font-size="21" font-weight="800" fill="#d35400" font-family="Times New Roman,Noto Serif CJK KR,serif">V₃</text>
+</svg></div><p class="eq" style="font-size:21px">Σ<sub>c′</sub> Q[T] = Q[C]</p><p class="sub">예: T={V₁,V₂,V₃}, C′={V₃}. V₃는 V₁·V₂로 되돌아가지 않으므로 합해서 지운다</p></div>
+<div class="card teal" style="padding:12px 14px;gap:6px"><span class="tag" style="font-size:24px">δ 연산자</span><h3>쪼개기·합치기 (independence)</h3>
+<p style="font-size:20px"><b>조건</b>: C와 C′ 사이에 <b>양방향(숨은 교란) 연결이 없다</b></p><div style="background:#fff;border-radius:10px;padding:2px"><svg xmlns="http://www.w3.org/2000/svg" width="520" height="130" viewBox="0 0 520 130" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M72.0,70.0 L125.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M179.0,70.0 L232.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M286.0,70.0 L339.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M393.0,70.0 L446.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M69.9,59.5 Q152.0,25.0 234.1,59.5" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M283.9,59.5 Q366.0,25.0 448.1,59.5" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M176.9,80.5 Q259.0,115.0 341.1,80.5" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="45" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="45" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₁</text>
+<circle cx="152" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="152" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">V₂</text>
+<circle cx="259" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="259" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₃</text>
+<circle cx="366" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="366" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">V₄</text>
+<circle cx="473" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="473" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">V₅</text>
+</svg></div><p class="eq" style="font-size:21px">Q[V] = Q[V₁,V₃,V₅] · Q[V₂,V₄]</p><p class="sub">덩어리 사이에 숨은 연결이 없으면 곱으로 나눌 수 있고, 거꾸로 곱해 합칠 수도 있다</p></div>
+<div class="card wine" style="padding:12px 14px;gap:6px"><span class="tag" style="font-size:24px">σ 연산자</span><h3>체제 바꾸기 (regime invariance)</h3>
+<p style="font-size:20px"><b>조건</b>: T가 개입 변수 X, Z와 <b>겹치지 않는다</b> (T∩X=T∩Z=∅)</p><div style="background:#fff;border-radius:10px;padding:2px"><svg xmlns="http://www.w3.org/2000/svg" width="260" height="200" viewBox="0 0 260 200" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M94.6,44.7 L70.4,75.3" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M46.0,118.3 L39.0,136.7" fill="none" stroke="#bbb" stroke-width="3" stroke-dasharray="3 6" marker-end="url(#mg)"/>
+<path d="M55.0,160.0 L195.0,160.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M90.4,40.5 Q44.2,77.2 34.2,135.4" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M132.4,36.0 Q196.0,67.2 213.7,135.8" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="110" cy="25" r="19" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="110" y="31.65" text-anchor="middle" font-size="19" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">W</text>
+<circle cx="55" cy="95" r="19" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="55" y="101.65" text-anchor="middle" font-size="19" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="30" cy="160" r="19" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="30" y="166.65" text-anchor="middle" font-size="19" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="220" cy="160" r="19" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="220" y="166.65" text-anchor="middle" font-size="19" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg></div><p class="eq" style="font-size:21px">Q[Y] ⇄ Q[Y∣do(x)]</p><p class="sub">개입을 받지 않는 변수들의 c-factor는 관측 세계와 개입 세계에서 같다</p></div>
+</div>
+<div class="banner dark">Σ = 변수를 지운다 · δ = 덩어리를 가른다 · σ = do 표시만 바꾼다. 세 연산자로 Q[V]=P(V)에서 목표 c-factor까지 길을 놓는다</div>
+</div></body></html>

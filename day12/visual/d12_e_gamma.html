@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.three svg{width:100%;height:auto}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">Γ 연산자: 조건부 질의를 c-factor 하나로 바꾼다<small>레마 4.4.6, 예 4.18–4.20, 그림 4.54–4.55. 질의 P(y∣do(x), z)</small></div>
+<div class="three">
+<div class="card purple"><span class="tag">① 그래프 G</span><svg xmlns="http://www.w3.org/2000/svg" width="410" height="140" viewBox="0 0 410 140" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M67.0,70.0 L123.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M177.0,70.0 L233.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M287.0,70.0 L343.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M59.1,50.9 Q95.0,15.0 130.9,50.9" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M65.6,78.5 Q205.0,125.0 344.4,78.5" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="40" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="150" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="150" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">W</text>
+<circle cx="260" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="260" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="370" cy="70" r="21" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="370" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg><p class="sub">X→W→Z→Y, 숨은 X⇠⇢W, X⇠⇢Y (그림 4.54(a))</p></div>
+<div class="card teal"><span class="tag">② G<sub><span class="ov">X</span></sub>에서 D = An(Y,Z)</span><svg xmlns="http://www.w3.org/2000/svg" width="410" height="140" viewBox="0 0 410 140" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M67.0,70.0 L123.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M177.0,70.0 L233.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M287.0,70.0 L343.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="40" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="150" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="150" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">W</text>
+<circle cx="260" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="260" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="370" cy="70" r="21" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="370" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg><p class="sub">X로 들어오는 연결 제거. D = {X,W,Z,Y} (그림 4.54(b))</p></div>
+<div class="card green"><span class="tag">③ Z에서 나가는 화살표 제거</span><svg xmlns="http://www.w3.org/2000/svg" width="410" height="140" viewBox="0 0 410 140" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M67.0,70.0 L123.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M177.0,70.0 L233.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M287.0,70.0 L343.0,70.0" fill="none" stroke="#bbb" stroke-width="3" stroke-dasharray="3 6" marker-end="url(#mg)"/>
+<circle cx="40" cy="70" r="21" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="150" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="150" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">W</text>
+<circle cx="260" cy="70" r="21" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="260" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="370" cy="70" r="21" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="370" y="77.35" text-anchor="middle" font-size="21" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg><p class="sub">Y와 어떤 경로로든 이어진 변수는 Y 자신뿐 → A = {Y} (그림 4.54(c))</p></div>
+</div>
+<div class="row">
+<div class="card orange grow"><span class="tag">돌아가는 길은 막힘</span><p>P(y,z∣do(x))를 만들면 Q[W∣do(x)]가 필요한데 P(V)의 d-tree에는 없다 → 이 분자는 식별 불가 (그림 4.55)</p></div>
+<div class="card green grow"><span class="tag">Γ 결과</span><p class="eq" style="font-size:21px">P(y∣do(x),z) ⟵Γ– Q[Y∣do(x)]</p><p>필요한 c-factor가 Q[Y∣do(x)] 하나뿐이고 d-tree에 있어 식별된다</p></div>
+</div>
+</div></body></html>

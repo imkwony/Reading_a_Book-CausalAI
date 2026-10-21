@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">소프트 개입을 do로 환원하기 (Thm 4.6.1)<small>한 변수 X에 대한 조건부·확률적 개입: 먼저 Z로 조건부 분해 (식 4.277–4.279)</small></div>
+<div class="card blue" style="padding:12px 16px;gap:4px"><span class="tag">① 분해</span><p class="eq" style="font-size:23px">P(y; σ<sub>X</sub>) = Σ<sub>z</sub> P(y∣z; σ<sub>X</sub>) P(z; σ<sub>X</sub>)</p><p class="sub">Z로 조건을 걸어 쪼갠다 (확률 공리)</p></div>
+<div class="card blue" style="padding:12px 16px;gap:4px"><span class="tag">② Z는 안 변한다</span><p class="eq" style="font-size:23px">P(z; σ<sub>X</sub>) = P(z)</p><p class="sub">Z에 X의 후손이 없으므로 X를 건드려도 Z의 분포는 그대로</p></div>
+<div class="two">
+<div class="card green"><span class="tag">③ 조건부 σ = g(z)</span><p class="eq">Σ<sub>z</sub> P(y∣do(x), z) P(z) ∣<sub>x=g(z)</sub></p><p class="sub">Z=z가 정해지면 X는 g(z)로 고정. z마다 다른 do를 끼워 넣는다 (식 4.277)</p></div>
+<div class="card purple"><span class="tag">③′ 확률적 σ = P̂(x∣z)</span><p class="eq">Σ<sub>z,x</sub> P(y∣do(x), z) P̂(x∣z) P(z)</p><p class="sub">Z=z에서 X가 x가 될 확률 P̂(x∣z)로 do(x) 효과를 가중 평균 (식 4.278)</p></div>
+</div>
+<div class="banner warn">한계: 개입이 둘 이상의 변수에 걸리고 한 정책이 다른 개입 변수의 후손에 의존하면 이 환원이 깨진다 (예 4.33)</div>
+</div></body></html>

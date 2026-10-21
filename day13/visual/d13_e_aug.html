@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.g2 .card{padding:12px 14px;gap:6px}.g2 .card p{font-size:20px}.rowc{display:flex;gap:10px;align-items:center}.rowc svg{width:190px;height:auto;flex:none}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">확장 전략 네 가지와 그림 속 예<small>이미 증명한 비식별 결과를 더 큰 그래프·쿼리로 옮긴다 (4.5.3–4.5.5절)</small></div>
+<div class="g2">
+<div class="card teal"><span class="tag">Lemma 4.5.2 그래프-부분그래프</span><div class="rowc"><svg xmlns="http://www.w3.org/2000/svg" width="210" height="110" viewBox="0 0 210 110" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M57.0,70.0 L153.0,70.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M55.2,61.3 Q105.0,40.0 154.8,61.3" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="35" cy="70" r="16" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="35" y="75.6" text-anchor="middle" font-size="16" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="175" cy="70" r="16" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="175" y="75.6" text-anchor="middle" font-size="16" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg><p class="eq" style="font-size:30px">+</p><svg xmlns="http://www.w3.org/2000/svg" width="210" height="120" viewBox="0 0 210 120" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M35.0,47.0 L35.0,68.0" fill="none" stroke="#d35400" stroke-width="4" marker-end="url(#mo)"/>
+<path d="M57.0,90.0 L153.0,90.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M55.2,81.3 Q105.0,60.0 154.8,81.3" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="35" cy="25" r="16" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="35" y="30.6" text-anchor="middle" font-size="16" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="35" cy="90" r="16" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="35" y="95.6" text-anchor="middle" font-size="16" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="175" cy="90" r="16" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="175" y="95.6" text-anchor="middle" font-size="16" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg></div><p>bow에서 비식별 + 화살표 Z→X 추가 = <b>IV 그래프도 비식별</b> (그림 4.63). 화살표를 더하면 제약이 줄어 반례가 늘 뿐이다</p></div>
+<div class="card blue"><span class="tag">Lemma 4.5.3 처치 확장 (예 4.26)</span><div class="rowc"><svg xmlns="http://www.w3.org/2000/svg" width="210" height="120" viewBox="0 0 210 120" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M57.0,40.0 L153.0,40.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M55.2,31.3 Q105.0,10.0 154.8,31.3" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M35.0,62.0 L35.0,78.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="35" cy="40" r="16" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="35" y="45.6" text-anchor="middle" font-size="16" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="175" cy="40" r="16" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="175" y="45.6" text-anchor="middle" font-size="16" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+<circle cx="35" cy="100" r="16" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="35" y="105.6" text-anchor="middle" font-size="16" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+</svg><p>P(y∣do(x))가 비식별 (bow) → P(y∣do(x,z))도 비식별 (그림 4.62)</p></div><p class="sub">X→Z 화살표를 뺀 그래프에서 증명한 뒤 4.5.2로 다시 붙인다</p></div>
+<div class="card wine"><span class="tag">Lemma 4.5.4 결과 확장 (예 4.27)</span><div class="rowc"><svg xmlns="http://www.w3.org/2000/svg" width="260" height="120" viewBox="0 0 260 120" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M57.0,80.0 L108.0,80.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M152.0,80.0 L203.0,80.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M53.6,68.3 Q82.5,50.0 111.4,68.3" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="35" cy="80" r="16" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="35" y="85.6" text-anchor="middle" font-size="16" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="130" cy="80" r="16" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="130" y="85.6" text-anchor="middle" font-size="16" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="225" cy="80" r="16" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="225" y="85.6" text-anchor="middle" font-size="16" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg><p>P(z∣do(x)) 비식별 (bow) → P(y,z∣do(x))도 비식별 (그림 4.65(a))</p></div></div>
+<div class="card orange"><span class="tag">Lemma 4.5.5 매핑 확장</span><div class="rowc"><svg xmlns="http://www.w3.org/2000/svg" width="260" height="120" viewBox="0 0 260 120" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M57.0,80.0 L108.0,80.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M152.0,80.0 L203.0,80.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M53.6,68.3 Q82.5,50.0 111.4,68.3" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="35" cy="80" r="16" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="35" y="85.6" text-anchor="middle" font-size="16" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="130" cy="80" r="16" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="130" y="85.6" text-anchor="middle" font-size="16" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="225" cy="80" r="16" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="225" y="85.6" text-anchor="middle" font-size="16" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg><p>Z가 Y의 조상 → P(y∣do(x)) 비식별. <b>Z가 Y의 조상이 아니면</b> 그림 4.65(c)처럼 P(z∣do(x))는 비식별이어도 P(y∣do(x))는 식별 가능</p></div></div>
+</div>
+<div class="banner warn">식별 가능성은 단조적이지 않다: 그림 4.64에서 P(y∣do(x,z))는 식별되지만 P(y∣do(x), z)는 식별되지 않는다 (4.5.3절 끝)</div>
+</div></body></html>
