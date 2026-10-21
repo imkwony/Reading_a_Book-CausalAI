@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.step{display:flex;align-items:center;gap:12px}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--dark);color:#fff;font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+.colhd{font-size:25px;font-weight:800;text-align:center;padding:8px;border-radius:10px;color:#fff}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">과학이 말하는 '이해'와 SCM으로 옮긴 '이해'<small>같은 골격(현상 → 모델 → 설명·예측)인데, 모델에 요구하는 정밀도가 다르다</small></div>
+  <div class="row">
+    <div class="col grow" style="gap:12px">
+      <div class="colhd" style="background:var(--purple)">자연과학의 이상형 (그림 3.1)</div>
+      <div class="card gray"><span class="tag">현상</span><p>설명하고 싶은 대상 (행성 궤도, 단백질 합성)</p></div>
+      <div class="varrow">↓ 모델링</div>
+      <div class="card purple"><span class="tag">모델 M∗를 완전히 지정</span><p>구조 함수 F와 외생 분포 P(U)까지 확정 (예: 뉴턴 방정식)</p></div>
+      <div class="varrow">↓</div>
+      <div class="card blue"><span class="tag">(b) 과거 설명</span><p>L1·L2 자료 D를 M∗가 재현한다</p></div>
+      <div class="card wine"><span class="tag">(c) 새 예측</span><p>자료에 없던 상황도 M∗에서 시뮬레이션</p></div>
+    </div>
+    <div class="col grow" style="gap:12px">
+      <div class="colhd" style="background:var(--green)">AI·데이터과학의 현실 (그림 3.2)</div>
+      <div class="card gray"><span class="tag">현상</span><p>설명하고 싶은 대상 (약 효과, 서비스 이용 행태)</p></div>
+      <div class="varrow">↓ 모델링</div>
+      <div class="card purple dashed"><span class="tag">약한 제약만: 인과 다이어그램 G</span><p>후보 SCM 집합 Ω 중 G와 맞는 부분 Ω_G만 좁힌다. 함수 형태는 정하지 않는다</p></div>
+      <div class="varrow">↓</div>
+      <div class="card blue"><span class="tag">(b) 과거 설명</span><p>G의 함의를 자료로 검증 (d-분리)</p></div>
+      <div class="card wine"><span class="tag">(c) 새 예측</span><p>G와 자료로 L2·L3 양을 계산할 수 있는지 따진다</p></div>
+    </div>
+  </div>
+  <div class="banner warn">M∗를 통째로 배우는 것은 대개 불가능하므로, '이해'의 목표를 'G + 자료로 새 인과 지식을 끌어내기'로 낮춘다</div>
+</div></body></html>

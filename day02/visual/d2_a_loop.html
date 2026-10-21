@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"></head><body>
+<div class="slide-visual">
+  <div class="hdr">추론이 '고리 안'인가 '고리 밖'인가<small>sampling-distribution loop: 진실(분포) · 표본 · 복원 절차</small></div>
+  <div class="row">
+    <div class="card green grow"><span class="tag">고리 안 · 질문 = 데이터</span><h3>통계·ML이 잘하는 영역</h3>
+      <p>지도학습: L1 데이터로 P(y|x)를 추정</p>
+      <p>강화학습: do(X=x) 데이터로 do(X=x) 효과를 추정</p>
+      <p class="sub">필요한 건 그 분포에 대한 통계적 가정</p></div>
+    <div class="card wine grow"><span class="tag">고리 밖 · 질문 ≠ 데이터</span><h3>인과 추론의 영역</h3>
+      <p>알고 싶은 것: 콜레스테롤(X)이 심부전(Y)에 미치는 효과</p>
+      <p>할 수 있는 것: 식단(Z)에만 실험 가능, 또는 관측만 가능</p>
+      <p class="sub">서로 다른 두 loop를 어떻게 이을 것인가?</p></div>
+  </div>
+  <div class="row">
+    <div class="card blue grow"><span class="tag">1 질문</span><p>어느 분포에 대해 알고 싶은가</p></div>
+    <div class="card gray grow"><span class="tag">2 데이터</span><p>실제로 표본을 얻은 분포는 무엇인가</p></div>
+    <div class="card purple grow dashed"><span class="tag">3 모델·가정</span><p>둘을 잇는 다리. 진실 M*은 일부만 보임</p></div>
+  </div>
+  <div class="banner dark">L2 데이터로는 L3 질문(책임·후회·효과 분해·설명)에 거의 답할 수 없다</div>
+</div></body></html>

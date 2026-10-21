@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.n{fill:#fff;stroke:#111;stroke-width:3}.nt{font-size:22px;font-weight:800;text-anchor:middle;dominant-baseline:central;font-family:'Noto Sans CJK KR'}
+.e{stroke:#111;stroke-width:3;fill:none;marker-end:url(#ar)}
+.f{font-family:'Times New Roman','Noto Serif CJK KR',serif;font-size:30px;font-weight:700;text-align:center}
+.ok{border-color:var(--green);background:var(--green-bg)}.no{border-color:var(--wine);background:var(--wine-bg)}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">백도어 기준과 조정 공식<small>정의 4.2.2 · 정리 4.2.3: 비인과 경로(화살표가 X로 들어오는 길)만 막는 Z를 찾는다</small></div>
+  <div class="row">
+    <div class="card blue grow"><span class="tag">조건 (i)</span><h3>Z에 X의 후손이 없다</h3><p>인과 경로를 막거나 통로를 새로 열지 않기 위해</p></div>
+    <div class="card blue grow"><span class="tag">조건 (ii)</span><h3>Z가 X로 들어오는 모든 길을 막는다</h3><p>X와 Y 사이 '화살표가 X로 향하는' 경로 전부</p></div>
+    <div class="card green grow"><span class="tag">결론</span><div class="f" style="font-size:26px">P(y∣do(x)) = Σ<sub>z</sub> P(y∣x,z) P(z)</div><p>L2 양이 L1 분포의 식으로 변한다</p></div>
+  </div>
+  <div class="row">
+    <div class="card ok grow"><span class="tag" style="background:var(--green)">통과: 공통 원인 Z</span>
+      <svg viewBox="0 0 300 120" width="300" height="120" style="align-self:center"><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker></defs>
+      <path class="e" d="M135,34 L78,78"/><path class="e" d="M165,34 L222,78"/><path class="e" d="M92,100 L206,100"/>
+      <circle class="n" cx="150" cy="24" r="22"/><text class="nt" x="150" y="24">Z</text><circle class="n" cx="64" cy="100" r="22"/><text class="nt" x="64" y="100">X</text><circle class="n" cx="236" cy="100" r="22"/><text class="nt" x="236" y="100">Y</text></svg>
+      <p>X←Z→Y를 Z로 막는다</p></div>
+    <div class="card no grow"><span class="tag" style="background:var(--wine)">실패 1: 매개변수 W</span>
+      <svg viewBox="0 0 300 120" width="300" height="120" style="align-self:center">
+      <path class="e" d="M88,40 L128,40" style="display:none"/><path class="e" d="M80,86 L132,40"/><path class="e" d="M168,40 L220,86"/>
+      <circle class="n" cx="150" cy="24" r="22" style="fill:#f6d5de;stroke:var(--wine)"/><text class="nt" x="150" y="24">W</text><circle class="n" cx="64" cy="100" r="22"/><text class="nt" x="64" y="100">X</text><circle class="n" cx="236" cy="100" r="22"/><text class="nt" x="236" y="100">Y</text></svg>
+      <p>W로 조정하면 인과 경로가 막혀 결과가 P(y)로 무너진다 (효과 0처럼 보임)</p></div>
+    <div class="card no grow"><span class="tag" style="background:var(--wine)">실패 2: 후손 Z</span>
+      <svg viewBox="0 0 300 150" width="300" height="150" style="align-self:center">
+      <path class="e" d="M88,60 L126,60"/><path class="e" d="M174,60 L212,60"/><path class="e" d="M150,84 L150,108"/>
+      <circle class="n" cx="64" cy="60" r="22"/><text class="nt" x="64" y="60">X</text><circle class="n" cx="150" cy="60" r="22"/><text class="nt" x="150" y="60">W</text><circle class="n" cx="236" cy="60" r="22"/><text class="nt" x="236" y="60">Y</text><circle class="n" cx="150" cy="128" r="18" style="fill:#f6d5de;stroke:var(--wine)"/><text class="nt" x="150" y="128">Z</text></svg>
+      <p>X의 후손 Z로 조정해도 인과 경로가 일부 막혀 일반적으로 결과가 틀린다 (식 4.41)</p></div>
+  </div>
+  <div class="banner warn">검사법: X에서 나가는 화살표를 모두 지운 그래프 G_X에서 X ⊥ Y ∣ Z 이면 조건 (ii)가 성립한다</div>
+</div></body></html>

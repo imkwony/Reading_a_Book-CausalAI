@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.engine{background:var(--dark);color:#fff;border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-width:300px;text-align:center}
+.engine .big{font-size:30px;font-weight:800}.engine .s{font-size:20px;font-weight:600;color:#ddd;line-height:1.4}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">인과 추론 엔진: 세 입력, 하나의 판정<small>질문 · 데이터 · 모델(가정)을 넣으면 '계산 가능한가'를 돌려준다</small></div>
+  <div class="row">
+    <div class="col grow" style="gap:14px">
+      <div class="card blue"><span class="tag">입력 1 · 질문</span><p>알고 싶은 것: P(y|do(x)), 정책 효과, 반사실 양, 또는 일반 조건부확률</p></div>
+      <div class="card gray"><span class="tag">입력 2 · 데이터</span><p>관측 P(V), 실험 자료 등. 질문과 어긋나면 교란·선택·전이 편향이 생김</p></div>
+      <div class="card purple"><span class="tag">입력 3 · 모델·가정</span><p>인과 다이어그램, 동치류, 군집 다이어그램, 무시가능성, 신경 인과 모델, 인과 프로그램</p></div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="engine"><div class="big">인과 추론 엔진</div><div class="s">세 입력을 모아<br>질문이 계산 가능한지 따진다</div></div>
+    <div class="arrow">→</div>
+    <div class="card green" style="min-width:250px;justify-content:center"><span class="tag">출력</span><h3>계산 가능?</h3><p>가능하면 답, 불가능하면 왜 불가능한지</p></div>
+  </div>
+  <div class="banner warn">가정 없이는 인과 추론이 일반적으로 불가능하다 (2.3절 CHT). 세 번째 입력이 질문과 데이터를 이어 준다</div>
+</div></body></html>

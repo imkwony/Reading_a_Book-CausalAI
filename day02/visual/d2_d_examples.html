@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.bar{display:flex;height:64px;border-radius:10px;overflow:hidden;font-size:21px;font-weight:800;color:#fff}
+.bar div{display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.2}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">예시 1·2: 격차를 쪼개 보기, 시행착오를 줄이기</div>
+  <div class="card blue"><h3>예 1.1 · 연봉 격차 $14,000는 어디서 왔나 (Part II)</h3>
+    <p>미국 연방 공무원 센서스: 남성이 평균 약 $14,000 더 번다</p>
+    <div class="bar"><div style="width:51%;background:var(--wine)">직접 효과 $7,210</div><div style="width:37%;background:var(--teal)">매개 $5,126</div><div style="width:12%;background:var(--blue)">교란 $1,675</div></div>
+    <p class="sub">직접 = 성별이 곧바로 연봉에 · 매개 = 가족·교육·업무 변수를 거쳐 · 교란 = 나이·인종·국적 등의 영향</p></div>
+  <div class="card teal"><h3>예 1.2 · 암 치료의 순차 결정 (Part III)</h3>
+    <p>2단계 임상시험에서 후회(regret)를 비교</p>
+    <ul><li>무작위 배정: 수천 번 뒤에도 후회가 선형 증가 = 계속 실험만 하고 최적 정책을 못 배움</li>
+    <li>인과 지식 사용: 초반엔 실험하다가 곧 수렴 = 최적 정책 학습</li>
+    <li>관측 + 실험 결합: 병원의 관측 자료를 함께 쓰면 초반 성능이 매우 좋음</li></ul></div>
+  <div class="banner warn">교란된 관측 자료도 올바르게 쓰면 도움이 된다는 것이 이 예시의 메시지 (9.2절 COOL)</div>
+</div></body></html>

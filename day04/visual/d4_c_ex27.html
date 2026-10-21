@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.eq{font-family:'Times New Roman','Noto Serif CJK KR',serif;font-size:23px;font-weight:700;line-height:1.5}
+table.t td,table.t th{text-align:center} table.t td:first-child{text-align:left}
+.ok{color:var(--green);font-weight:800}.no{color:var(--wine);font-weight:800}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">예 2.7: 세 개의 SCM, 같은 관측 분포<small>X: 치료, Y: 회복. U₁, U₂는 공정한 이진 동전 (각 확률 1/2)</small></div>
+  <div class="row">
+    <div class="card purple grow"><span class="tag">M∗</span><div class="eq">X ← U₁<br>Y ← U₂</div><p class="sub">X는 Y와 무관</p></div>
+    <div class="card blue grow"><span class="tag">M</span><div class="eq">X ← 1(U₁ = U₂)<br>Y ← U₁ + 1(X=1, U₁=0, U₂=1)</div><p class="sub">Y가 X에 의존</p></div>
+    <div class="card wine grow"><span class="tag">M′</span><div class="eq">X ← U₁<br>Y ← X·U₂ + (1−X)(1−U₂)</div><p class="sub">Y가 X에 의존</p></div>
+  </div>
+  <table class="t"><tr><th style="width:36%">질문</th><th>M∗</th><th>M</th><th>M′</th></tr>
+    <tr><td><b style="color:var(--blue)">L₁</b> P(X, Y) (4칸 모두)</td><td>1/4</td><td>1/4</td><td>1/4</td></tr>
+    <tr><td><b style="color:var(--teal)">L₂</b> P(Y=1 ∣ do(X=1))</td><td>1/2</td><td class="no">3/4</td><td>1/2</td></tr>
+    <tr><td><b style="color:var(--wine)">L₃</b> P(Y<sub>X=0</sub>=1 ∣ X=1, Y=0)</td><td>0</td><td>0 <span style="font-size:17px;color:var(--gray)">(직접 계산)</span></td><td class="no">1</td></tr>
+  </table>
+  <div class="banner warn">M∗과 M은 L₁이 같지만 L₂가 다르고, M∗과 M′은 L₁·L₂가 같지만 L₃가 정반대다</div>
+</div></body></html>

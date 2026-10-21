@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}table.t td,table.t th{font-size:20px;padding:8px 10px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">일반화 프론트도어와 템플릿 정리<small>프론트도어를 '백도어 두 번'으로 보면 조정 집합을 ∅·X 이외로 넓힐 수 있다 (Def 4.2.6, Thm 4.2.15)</small></div>
+<div class="row">
+ <div class="card blue" style="width:430px"><span class="tag">그림 4.24의 예</span><svg xmlns="http://www.w3.org/2000/svg" width="380" height="275" viewBox="0 0 380 275" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M179.6,54.0 Q145.1,140.3 64.3,186.2" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M200.4,54.0 Q234.9,140.3 315.7,186.2" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M93.9,122.9 L56.1,177.1" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M127.5,121.9 L172.5,178.1" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M252.5,121.9 L207.5,178.1" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M286.1,122.9 L323.9,177.1" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M68.0,200.0 L162.0,200.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M218.0,200.0 L312.0,200.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M66.0,210.4 Q190.0,260.0 314.0,210.4" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="190" cy="28" r="22" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="190" y="35.7" text-anchor="middle" font-size="22" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">W₁</text>
+<circle cx="110" cy="100" r="22" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="110" y="107.7" text-anchor="middle" font-size="22" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">W₂</text>
+<circle cx="270" cy="100" r="22" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="270" y="107.7" text-anchor="middle" font-size="22" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">W₃</text>
+<circle cx="40" cy="200" r="22" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="207.7" text-anchor="middle" font-size="22" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="190" cy="200" r="22" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="190" y="207.7" text-anchor="middle" font-size="22" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="340" cy="200" r="22" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="340" y="207.7" text-anchor="middle" font-size="22" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg><p class="sub">튜플 (Z, Z₁, Z₂) = ({Z}, {W₂}, {W₃})</p></div>
+ <div class="col grow" style="gap:10px">
+  <div class="card teal"><span class="tag">g-FDC 조건</span><p>(i) Z가 X→Y의 모든 인과 경로를 가로챈다 · (ii) Z₁이 (X,Z)에 대해 백도어 허용 · (iii) Z₂가 (Z,Y)에 대해 백도어 허용</p></div>
+  <div class="card green"><span class="tag">식 4.91</span><p class="eq">P(y∣do(x)) = Σ<sub>z</sub>Σ<sub>w₂</sub> P(z∣x,w₂)P(w₂) · Σ<sub>x′,w₃</sub> P(y∣z,x′,w₃)P(x′,w₃)</p><p class="sub">앞부분 = X→Z 효과, 뒷부분 = Z→Y 효과를 각각 백도어로</p></div>
+ </div>
+</div>
+<table class="t"><tr><th>템플릿</th><th>X→Z 단계</th><th>Z→Y 단계</th><th>필요한 것</th></tr>
+<tr><td>백도어 (Def 4.2.4)</td><td colspan="2">공변량 Z로 한 번 조정</td><td>교란을 충분히 관측</td></tr>
+<tr><td>프론트도어 (Def 4.2.5)</td><td>∅로 조정</td><td>X로 조정</td><td>완전 매개 변수 Z</td></tr>
+<tr><td>일반화 프론트도어 (Def 4.2.6)</td><td>Z₁로 조정</td><td>Z₂(와 X)로 조정</td><td>두 단계 각각의 허용 집합</td></tr></table>
+<div class="banner warn">세 템플릿은 '경우마다 맞는 도구를 찾아야' 하는 방식. 어느 템플릿에도 안 맞는 그래프는? → 모든 경우를 다루는 규칙 do-calculus (Day 10)</div>
+</div></body></html>

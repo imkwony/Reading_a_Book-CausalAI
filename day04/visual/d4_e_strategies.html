@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.s{font-size:20px;font-weight:600;color:var(--gray)}</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">CHT 증명의 아이디어: 같은 아래 층, 다른 위 층을 만드는 법<small>예 2.7–2.9는 서로 다른 '교란' 전략을 보여 준다</small></div>
+  <div class="row">
+    <div class="card blue grow"><span class="tag">L₁은 같고 L₂가 다름</span><h3>예 2.7 (M∗ vs M)</h3><p>X, Y가 독립으로 보이는데, 실제로는 Y가 X에 강하게 의존하는 모델이 같은 관측 분포를 만든다</p><p class="sub">일반 구성: 모든 변수가 하나의 외생 변수 U에만 의존하는 모델 (p.69)</p></div>
+    <div class="card teal grow"><span class="tag">L₂는 같고 L₃가 다름</span><h3>예 2.7 (M∗ vs M′)</h3><p>RCT에서 효과가 0으로 나와도, 개체별 반응은 정반대일 수 있다</p><p class="sub">P(Y<sub>X=0</sub>=1∣X=1,Y=0): M∗에서 0, M′에서 1</p></div>
+  </div>
+  <div class="row">
+    <div class="card purple grow"><span class="tag">방향이 뒤집힌 모델</span><h3>예 2.8 (주사위)</h3><p>X ← 2U₁ − Y 로 쓰면 L₁은 같지만, Y가 X의 원인이 되는 다른 L₂를 만든다. 외생 변수를 더해 L₂는 같게 두고 L₃만 바꾸는 M′도 만든다</p></div>
+    <div class="card wine grow"><span class="tag">확률을 살짝 옮기기</span><h3>예 2.9 (의학)</h3><p>Y의 식을 바꿔 X의 직접 효과를 숨기면 P(Y∣X)=P(Y∣do(X))가 된다. 그리고 확률 ε=0.005를 두 새 외생 상태로 옮기면 L₁·L₂는 같고 L₃만 ε만큼 달라진다</p></div>
+  </div>
+  <div class="banner dark">모든 전략의 공통점: 변수 사이에 약간이라도 의존성이 있으면 아래 층에서 안 보이게 숨길 수 있다</div>
+</div></body></html>

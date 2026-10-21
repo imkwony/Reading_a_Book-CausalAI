@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.n{fill:#fff;stroke:#111;stroke-width:3}.nt{font-size:24px;font-weight:800;text-anchor:middle;dominant-baseline:central;font-family:'Noto Sans CJK KR'}
+.e{stroke:#111;stroke-width:3;fill:none;marker-end:url(#ar)}.cut{stroke:var(--orange);stroke-width:3;stroke-dasharray:7 5;fill:none}
+.f{font-family:'Times New Roman','Noto Serif CJK KR',serif;font-size:25px;font-weight:700;line-height:1.55}
+.x{text-decoration:line-through;color:var(--orange)}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">개입 = 'X를 정하던 메커니즘을 떼어 내고 상수로 대체'<small>정의 4.1.1: do(X=x)는 X의 방정식을 삭제하고 나머지 방정식에 X=x를 넣은 모델 M_x에서 나온 분포</small></div>
+  <div class="row">
+    <div class="card blue grow"><span class="tag">현실 · 자료를 얻은 세계 P(v)</span>
+      <svg viewBox="0 0 340 160" width="340" height="160" style="align-self:center"><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker></defs>
+      <path class="e" d="M150,36 L68,86"/><path class="e" d="M190,36 L272,86"/><path class="e" d="M170,115 L196,115" style="display:none"/>
+      <path class="e" d="M148,118 L196,118" style="display:none"/>
+      <circle class="n" cx="170" cy="26" r="22"/><text class="nt" x="170" y="26">Z</text>
+      <circle class="n" cx="55" cy="118" r="22"/><text class="nt" x="55" y="118">X</text>
+      <circle class="n" cx="170" cy="118" r="22"/><text class="nt" x="170" y="118">W</text>
+      <circle class="n" cx="285" cy="118" r="22"/><text class="nt" x="285" y="118">Y</text>
+      <path class="e" d="M79,118 L145,118"/><path class="e" d="M194,118 L260,118"/>
+      <path class="e" d="M180,46 L270,100" style="display:none"/></svg>
+      <div class="f">P(z,x,w,y) = P(z) · P(x∣z) · P(w∣x) · P(y∣w,z)</div>
+      <p class="sub">식 4.4의 F: X ← f_X(Z, U_x)</p></div>
+    <div class="arrow" style="flex-direction:column;font-size:22px;text-align:center">do(X=x)<br>→</div>
+    <div class="card teal grow"><span class="tag">가상의 세계 · M_x</span>
+      <svg viewBox="0 0 340 160" width="340" height="160" style="align-self:center">
+      <path class="e" d="M150,36 L68,86" style="display:none"/><path class="cut" d="M150,38 L72,88"/><path class="e" d="M190,36 L272,86" style="display:none"/>
+      <circle class="n" cx="170" cy="26" r="22"/><text class="nt" x="170" y="26">Z</text>
+      <circle class="n" cx="55" cy="118" r="22" style="fill:var(--teal-bg);stroke:var(--teal)"/><text class="nt" x="55" y="118">x</text>
+      <circle class="n" cx="170" cy="118" r="22"/><text class="nt" x="170" y="118">W</text>
+      <circle class="n" cx="285" cy="118" r="22"/><text class="nt" x="285" y="118">Y</text>
+      <path class="e" d="M79,118 L145,118"/><path class="e" d="M194,118 L260,118"/><path class="e" d="M188,42 L272,96" style="display:none"/>
+      <path class="e" d="M186,44 L274,98"/><text x="40" y="62" style="font-size:20px;font-weight:800;fill:#d35400;font-family:'Noto Sans CJK KR'">Z→X 끊김</text></svg>
+      <div class="f">P(z,w,y∣do(x)) = P(z) · <span class="x">P(x∣z)</span>→1 · P(w∣x) · P(y∣w,z)</div>
+      <p class="sub">식 4.5: X의 인수만 빼고 나머지는 그대로 (X=x 대입)</p></div>
+  </div>
+  <div class="banner dark">자료 P는 '있는 그대로의 세계'만 말해 준다. P(y∣do(x))를 구하려면 두 세계를 이을 가정(그래프)이 필요하다</div>
+</div></body></html>

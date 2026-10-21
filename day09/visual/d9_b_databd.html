@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.bk{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.bk .card{padding:12px 14px}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:24px;font-weight:700}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">그래프 없이 순서만으로: 데이터 기반 백도어 (Thm 4.2.11)<small>"무엇이 먼저 일어나는가"와 조건부 독립 검정만으로 허용 집합을 판정한다</small></div>
+<div class="bk">
+ <div class="card teal"><span class="tag">처치 X</span><p>효과를 알고 싶은 원인</p></div>
+ <div class="card gray"><span class="tag">결과 Y</span><p>효과를 볼 대상</p></div>
+ <div class="card blue"><span class="tag">W (공변량)</span><p>X·Y의 후손이 아닌 변수 = 시간상 먼저</p></div>
+ <div class="card orange"><span class="tag">버리는 변수</span><p>나머지(X·Y의 후손 등)는 쓰지 않는다</p></div>
+</div>
+<div class="banner dark">추가 가정: 충실성(faithfulness: 데이터에서 보이는 조건부 독립은 모두 그래프의 분리에서 온다) + 믿을 만한 조건부 독립 검정</div>
+<div class="row">
+ <div class="card green grow"><span class="tag">규칙 1 · 효과가 있다</span>
+  <p>어떤 W∈W와 Z⊆W∖{W}가 있어서</p>
+  <ul><li class="eq">(i) W ⫫̸ Y ∣ Z</li><li class="eq">(ii) W ⫫ Y ∣ Z ∪ {X}</li></ul>
+  <p>이면 <b>X는 Y에 영향</b>을 주고, <b>Z는 백도어 허용 집합</b></p>
+  <p class="sub">직관: W→…→X→…→Y 경로는 X를 조건에 넣을 때만 막힌다 = X가 원인 경로 위에 있다</p></div>
+ <div class="card wine grow"><span class="tag">규칙 2 · 효과가 없다</span>
+  <p>(i) Z⊆W로 X ⫫ Y ∣ Z, 또는</p>
+  <p>(ii) W ⫫̸ X ∣ Z 이면서 (iii) W ⫫ Y ∣ Z</p>
+  <p>이면 <b>X는 Y에 효과가 없다</b></p>
+  <p class="eq">P(y ∣ do(x)) = P(y)</p>
+  <p class="sub">(ii)(iii)은 잠재 교란이 있어도 '효과 없음'을 찾아낼 수 있다</p></div>
+</div>
+<div class="banner warn">가정이 약할수록 결론도 약하다: 그림 4.20(a)에서 Z는 허용 집합이지만 규칙 1로는 이를 발견하지 못한다</div>
+</div></body></html>

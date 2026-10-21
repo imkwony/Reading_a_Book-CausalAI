@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.grid{display:grid;grid-template-columns:200px repeat(3,1fr);gap:6px;flex:1}
+.grid div{border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:20px;font-weight:700;min-height:62px;padding:4px}
+.ax{background:#f4f4f4;color:var(--gray)}
+.e{background:#fff;border:2px dashed #ccc;color:#bbb}
+.l1{background:var(--blue);color:#fff}.l2{background:var(--teal);color:#fff}.l3{background:var(--wine);color:#fff}.sc{background:var(--purple);color:#fff}
+table.t th,table.t td{font-size:20px;padding:7px 10px}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">인과 이해 평면(CUP): 어떤 양이 어디에 놓이나<small>세로 = 모집단을 얼마나 좁혔나 · 가로 = 메커니즘을 얼마나 나눴나 (그림 3.6을 단순화한 개념도)</small></div>
+  <div class="row">
+    <div class="col" style="flex:1.25;gap:8px">
+      <div class="grid">
+        <div class="ax"></div><div class="ax">직접 DE</div><div class="ax">간접 IE</div><div class="ax">허위 SE</div>
+        <div class="ax">단위 하나 δ<sub>u</sub></div><div class="sc" style="grid-column:span 3">SCM: 모든 양의 근원</div>
+        <div class="ax">P(u∣x,y)</div><div class="l3" style="grid-column:span 2">PN / PS</div><div class="e">…</div>
+        <div class="ax">P(u∣x)</div><div class="l3" style="grid-column:span 2">ETT (x-TE)</div><div class="e">…</div>
+        <div class="ax">P(u∣z)</div><div class="l2" style="grid-column:span 2">z-TE</div><div class="e">…</div>
+        <div class="ax">P(u) 전체</div><div class="l2" style="grid-column:span 2">TE</div><div class="l1">TV (L1): 세 칸 모두</div>
+      </div>
+      <div class="row" style="gap:8px"><div class="card blue grow" style="padding:8px 12px"><p>L1: TV는 세 칸을 섞음</p></div><div class="card teal grow" style="padding:8px 12px"><p>L2: 허위를 떼어 인과 칸만</p></div></div>
+    </div>
+    <div class="col" style="flex:1">
+      <table class="t"><tr><th>층</th><th>양</th><th>C₀→C₁</th><th>E</th></tr>
+      <tr><td style="color:var(--blue);font-weight:800">L1</td><td>TV</td><td>∅</td><td>x₀ / x₁</td></tr>
+      <tr><td style="color:var(--teal);font-weight:800">L2</td><td>TE</td><td>x₀→x₁</td><td>∅</td></tr>
+      <tr><td style="color:var(--teal);font-weight:800">L2</td><td>z-TE</td><td>x₀→x₁</td><td>z</td></tr>
+      <tr><td style="color:var(--wine);font-weight:800">L3</td><td>x-TE (ETT)</td><td>x₀→x₁</td><td>x</td></tr>
+      <tr><td style="color:var(--wine);font-weight:800">L3</td><td>xz-TE</td><td>x₀→x₁</td><td>x, z</td></tr>
+      <tr><td style="color:var(--wine);font-weight:800">L3</td><td>xy-TE (PN/PS)</td><td>x₀→x₁</td><td>x, y</td></tr></table>
+      <div class="card orange" style="padding:10px 14px"><p>L2 → L3로 넘어가는 신호: E(사실)의 X값과 C(반사실)의 X값이 <b>충돌</b>한다</p></div>
+    </div>
+  </div>
+</div></body></html>

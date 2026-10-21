@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:24px;font-weight:700}.step{display:grid;grid-template-columns:1fr 44px 1fr 44px 1.15fr;gap:8px;align-items:stretch}.step .card{padding:12px 14px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">프론트도어 기준: 교란을 못 봐도 '중간 다리'가 있으면 된다<small>Def 4.2.5 · Thm 4.2.14 (4.2.6절)</small></div>
+<div class="row">
+ <div class="card purple" style="width:470px"><span class="tag">그래프 (U 미관측)</span><svg xmlns="http://www.w3.org/2000/svg" width="420" height="230" viewBox="0 0 420 230" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M188.5,55.9 L71.5,169.1" fill="none" stroke="#d35400" stroke-width="4" marker-end="url(#mo)"/>
+<path d="M231.5,55.9 L348.5,169.1" fill="none" stroke="#d35400" stroke-width="4" marker-end="url(#mo)"/>
+<path d="M80.0,190.0 L180.0,190.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M240.0,190.0 L340.0,190.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="210" cy="35" r="24" fill="#f1ebf7" stroke="#7a4e9c" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="210" y="44.1" text-anchor="middle" font-size="26" font-weight="800" fill="#7a4e9c" font-family="Times New Roman,Noto Serif CJK KR,serif">U</text>
+<circle cx="50" cy="190" r="24" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="50" y="199.1" text-anchor="middle" font-size="26" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="210" cy="190" r="24" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="210" y="199.1" text-anchor="middle" font-size="26" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="370" cy="190" r="24" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="370" y="199.1" text-anchor="middle" font-size="26" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg><p class="sub">X와 Y 사이의 숨은 교란 U. 모든 효과가 Z를 거쳐 간다</p></div>
+ <div class="col grow" style="gap:10px">
+  <div class="card blue"><span class="tag">조건 (i)</span><p>Z가 X→Y의 모든 인과 경로를 가로챈다 (완전 매개)</p></div>
+  <div class="card teal"><span class="tag">조건 (ii)</span><p>X에서 Z로 가는 열린 백도어 경로가 없다 (X→Z 교란 없음)</p></div>
+  <div class="card green"><span class="tag">조건 (iii)</span><p>Z에서 Y로 가는 모든 백도어 경로가 X로 막힌다 (Z→Y 교란은 X로 조정)</p></div>
+ </div>
+</div>
+<div class="step">
+ <div class="card teal"><span class="tag">1단계 · X→Z</span><p class="eq">P(z ∣ x)</p><p class="sub">조정 집합 ∅인 백도어</p></div>
+ <div class="arrow">×</div>
+ <div class="card green"><span class="tag">2단계 · Z→Y</span><p class="eq">Σ<sub>x′</sub> P(y∣x′,z)P(x′)</p><p class="sub">X로 조정하는 백도어 (x′는 합산용 값)</p></div>
+ <div class="arrow">→</div>
+ <div class="card dark" style="background:#111;border-color:#111"><span class="tag" style="background:#fff;color:#111">식 4.89</span><p class="eq" style="color:#fff">P(y∣do(x)) = Σ<sub>z</sub> P(z∣x) Σ<sub>x′</sub> P(y∣x′,z)P(x′)</p></div>
+</div>
+<div class="banner warn">조심: 첫 인자의 x는 개입 값, 안쪽 합의 x′는 합산 인덱스. 결과는 x와 y의 함수이고 z와 x′는 사라진다</div>
+</div></body></html>

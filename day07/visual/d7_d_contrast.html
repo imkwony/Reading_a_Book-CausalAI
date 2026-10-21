@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.f{font-family:'Times New Roman','Noto Serif CJK KR',serif;font-size:30px;font-weight:700;text-align:center;line-height:1.7}
+.f .w{color:var(--wine)}.f .b{color:var(--blue)}.f .t{color:var(--teal)}
+.f sub,.f sup{font-size:20px}
+.lbl{font-size:20px;font-weight:700;color:var(--gray);text-align:center}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">대비(contrast)를 둘로 쪼개고, 다시 단위 수준으로 펼친다<small>정리 3.2.1: 어떤 대비든 '반사실 변이'와 '사실 변이'의 합이다</small></div>
+  <div class="card gray"><span class="tag">정의 3.2.1 · 대비</span>
+    <div class="f">C(C<sub>0</sub>, C<sub>1</sub>, E<sub>0</sub>, E<sub>1</sub>) = P(y<sub>C1</sub> ∣ E<sub>1</sub>) − P(y<sub>C0</sub> ∣ E<sub>0</sub>)</div>
+    <div class="lbl">E = 실제로 관찰된 조건(사실) · C = 결과가 어떻게 반응할지 정하는 가정(반사실)</div></div>
+  <div class="varrow">↓ 가운데 항 P(y<sub>C0</sub>∣E<sub>1</sub>)을 더하고 뺀다</div>
+  <div class="row">
+    <div class="card wine grow"><span class="tag">반사실 대비 (E₀ = E₁)</span>
+      <div class="f">Σ<sub>u</sub> <span class="w">[y<sub>C1</sub>(u) − y<sub>C0</sub>(u)]</span> <span class="b">P(u ∣ E)</span></div>
+      <p><span style="color:var(--wine);font-weight:800">빨강</span> = 한 단위가 두 조건에서 보이는 차이 (메커니즘이 정함, P(u)와 무관)</p>
+      <p><span style="color:var(--blue);font-weight:800">파랑</span> = E 아래서 u가 얼마나 뽑히는가 (모집단 선택)</p></div>
+    <div class="card blue grow"><span class="tag">사실 대비 (C₀ = C₁)</span>
+      <div class="f">Σ<sub>u</sub> <span class="w">y<sub>C</sub>(u)</span> <span class="b">[P(u ∣ E<sub>1</sub>) − P(u ∣ E<sub>0</sub>)]</span></div>
+      <p>메커니즘은 고정, <b>누가 뽑혔나</b>의 차이만 남는다</p>
+      <p>X보다 앞선 원인에서 오는 변이 = <b>허위(spurious)</b> 변이</p></div>
+  </div>
+  <div class="banner dark">반사실 변이는 X의 '아래쪽'(downstream) 인과 효과, 사실 변이는 X의 '위쪽'(upstream) 선택 효과</div>
+</div></body></html>

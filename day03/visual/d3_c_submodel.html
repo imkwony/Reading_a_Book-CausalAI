@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.eqs{font-family:'Times New Roman','Noto Serif CJK KR',serif;font-size:25px;font-weight:700;line-height:1.55}
+.eqs .cut{color:var(--teal);background:#d3efe8;border-radius:6px;padding:0 6px}
+svg text{font-family:'Times New Roman','Noto Serif CJK KR',serif;font-weight:700;font-size:26px;text-anchor:middle;dominant-baseline:central}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">개입 = 한 변수의 메커니즘을 상수로 교체<small>예 2.2의 SCM M에서 do(X=1)을 하면 서브모델 M<sub>x</sub>가 된다</small></div>
+  <div class="row">
+    <div class="card blue grow"><span class="tag">원래 모델 M</span>
+      <div class="eqs">Z ← 1(U<sub>r</sub>=1, U<sub>z</sub>=1)<br><span class="cut" style="color:var(--blue);background:#d6e6f2">X ← 1(Z=1,U<sub>x</sub>=1) + 1(Z=0,U<sub>x</sub>=0)</span><br>Y ← 1(X=1,U<sub>r</sub>=1) + …</div>
+      <svg viewBox="0 -30 400 180" width="100%"><defs><marker id="a" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14z" fill="#555"/></marker></defs>
+        <circle cx="70" cy="45" r="24" fill="#fff" stroke="#7a4e9c" stroke-width="3" stroke-dasharray="6 4"/><text x="70" y="45">U<tspan font-size="16" dy="6">r</tspan></text>
+        <circle cx="170" cy="45" r="24" fill="#fff" stroke="#555" stroke-width="3"/><text x="170" y="45">Z</text>
+        <circle cx="270" cy="45" r="24" fill="#fff" stroke="#555" stroke-width="3"/><text x="270" y="45">X</text>
+        <circle cx="370" cy="45" r="24" fill="#fff" stroke="#555" stroke-width="3"/><text x="370" y="45">Y</text>
+        <circle cx="270" cy="125" r="20" fill="#fff" stroke="#7a4e9c" stroke-width="3" stroke-dasharray="6 4"/><text x="270" y="125">U<tspan font-size="14" dy="5">x</tspan></text>
+        <path d="M80,22 Q220,-45 360,22" fill="none" stroke="#555" stroke-width="3" marker-end="url(#a)"/><line x1="95" y1="45" x2="144" y2="45" stroke="#555" stroke-width="3" marker-end="url(#a)"/>
+        <line x1="195" y1="45" x2="244" y2="45" stroke="#555" stroke-width="3" marker-end="url(#a)"/>
+        <line x1="295" y1="45" x2="344" y2="45" stroke="#555" stroke-width="3" marker-end="url(#a)"/>
+        <line x1="270" y1="104" x2="270" y2="72" stroke="#555" stroke-width="3" marker-end="url(#a)"/>
+      </svg>
+      <p class="sub">X의 입력: Z와 U<sub>x</sub> (자연스러운 변동의 출처). U<sub>y</sub>, U<sub>z</sub>는 생략</p></div>
+    <div class="arrow" style="flex-direction:column;min-width:130px;font-size:20px;text-align:center"><span>do(X=1)</span><span style="font-size:40px">→</span><span>f<sub>x</sub>를<br>상수로 교체</span></div>
+    <div class="card teal grow"><span class="tag">서브모델 M<sub>x</sub></span>
+      <div class="eqs">Z ← 1(U<sub>r</sub>=1, U<sub>z</sub>=1)<br><span class="cut">X ← 1</span><br>Y ← 1(X=1,U<sub>r</sub>=1) + …</div>
+      <svg viewBox="0 -30 400 180" width="100%">
+        <circle cx="70" cy="45" r="24" fill="#fff" stroke="#7a4e9c" stroke-width="3" stroke-dasharray="6 4"/><text x="70" y="45">U<tspan font-size="16" dy="6">r</tspan></text>
+        <circle cx="170" cy="45" r="24" fill="#fff" stroke="#555" stroke-width="3"/><text x="170" y="45">Z</text>
+        <rect x="246" y="21" width="48" height="48" rx="8" fill="#d3efe8" stroke="#0e6655" stroke-width="3"/><text x="270" y="45">X=1</text>
+        <circle cx="370" cy="45" r="24" fill="#fff" stroke="#555" stroke-width="3"/><text x="370" y="45">Y</text>
+        <circle cx="270" cy="125" r="20" fill="#fff" stroke="#bbb" stroke-width="3" stroke-dasharray="6 4"/><text x="270" y="125" fill="#bbb">U<tspan font-size="14" dy="5">x</tspan></text>
+        <path d="M80,22 Q220,-45 360,22" fill="none" stroke="#555" stroke-width="3" marker-end="url(#a)"/><line x1="95" y1="45" x2="144" y2="45" stroke="#555" stroke-width="3" marker-end="url(#a)"/>
+        <line x1="195" y1="45" x2="240" y2="45" stroke="#d35400" stroke-width="3" stroke-dasharray="5 5"/><text x="218" y="22" fill="#d35400" font-size="30">✕</text>
+        <line x1="295" y1="45" x2="344" y2="45" stroke="#555" stroke-width="3" marker-end="url(#a)"/>
+        <line x1="270" y1="104" x2="270" y2="74" stroke="#d35400" stroke-width="3" stroke-dasharray="5 5"/>
+      </svg>
+      <p class="sub">Z와 U<sub>x</sub>가 X에 주던 영향이 끊긴다. P(U)는 그대로</p></div>
+  </div>
+  <div class="banner warn">참고: 그림은 함수의 입력 관계를 옮겨 그린 것. 인과 다이어그램은 Day 5에서 정식으로 배운다</div>
+</div></body></html>

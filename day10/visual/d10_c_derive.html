@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.two h3{font-size:25px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">규칙으로 유도하기: 백도어와 프론트도어가 한 줄씩 나온다<small>템플릿 두 개가 모두 do-calculus의 특수 경우 (4.3.3절, 식 4.120–4.126)</small></div>
+<div class="two">
+<div class="col" style="gap:10px"><div class="card teal"><span class="tag">백도어 그래프 (Z→X, Z→Y, X→Y)</span></div>
+<div class="card teal" style="padding:10px 14px;gap:4px"><p class="eq">P(y∣do(x)) = Σ<sub>z</sub> P(y∣do(x), z) P(z∣do(x))</p><p class="sub"><b>①</b> Z에 대해 합산 (확률의 기본 공리)</p></div>
+<div class="card teal" style="padding:10px 14px;gap:4px"><p class="eq">= Σ<sub>z</sub> P(y∣do(x), z) P(z)</p><p class="sub"><b>②</b> 규칙 3: Z⫫X in G<sub><span class="ov">X</span></sub> → P(z∣do(x))=P(z)</p></div>
+<div class="card green" style="padding:10px 14px;gap:4px"><p class="eq">= Σ<sub>z</sub> P(y∣x, z) P(z)</p><p class="sub"><b>③</b> 규칙 2: Y⫫X∣Z in G<sub><span class="un">X</span></sub> → do(x)를 see(x)로</p></div>
+</div>
+<div class="col" style="gap:10px"><div class="card wine"><span class="tag">프론트도어 그래프 (X→Z→Y, 숨은 X↔Y)</span></div>
+<div class="card teal" style="padding:10px 14px;gap:4px"><p class="eq">P(y∣do(x)) = Σ<sub>z</sub> P(y∣do(x), z) P(z∣do(x))</p><p class="sub"><b>①</b> Z에 대해 합산</p></div>
+<div class="card teal" style="padding:10px 14px;gap:4px"><p class="eq">= Σ<sub>z</sub> P(y∣do(x,z)) P(z∣do(x))</p><p class="sub"><b>②</b> 규칙 2: do(z)와 see(z) 교환 (그래프 G<sub><span class="ov">X</span><span class="un">Z</span></sub>)</p></div>
+<div class="card teal" style="padding:10px 14px;gap:4px"><p class="eq">= Σ<sub>z</sub> P(y∣do(z)) P(z∣do(x))</p><p class="sub"><b>③</b> 규칙 3: Y⫫X∣Z, do(x) 제거</p></div>
+<div class="card green" style="padding:10px 14px;gap:4px"><p class="eq">= Σ<sub>z</sub> P(z∣x) Σ<sub>x′</sub> P(y∣z,x′)P(x′)</p><p class="sub"><b>④</b> 두 인자에 각각 백도어 (∅와 X)</p></div>
+</div></div>
+<div class="banner dark">같은 식이 Day 9의 식 4.89와 일치: 프론트도어 = 백도어를 두 번 적용한 do-calculus 유도의 결과</div>
+</div></body></html>

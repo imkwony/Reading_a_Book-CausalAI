@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+svg text{font-family:'Noto Sans CJK KR',sans-serif;font-weight:700}
+.chk{display:flex;align-items:center;gap:14px;font-size:24px;font-weight:700}
+.chk .m{width:46px;height:46px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">인과 계층 정리(CHT): 아래 층이 같아도 위 층은 다르다<small>모든 SCM의 집합 Ω 안에서 M∗과 같은 L₁·L₂ 값을 갖지만 L₃가 다른 SCM M이 존재한다 (Figure 2.7)</small></div>
+  <div class="row">
+    <div class="card gray grow" style="padding:10px">
+      <svg viewBox="0 0 560 400" width="100%">
+        <rect x="8" y="8" width="544" height="384" rx="22" fill="#f1ebf7" stroke="#7a4e9c" stroke-width="3"/>
+        <text x="28" y="44" font-size="24" fill="#7a4e9c">Ω = 같은 V를 갖는 모든 SCM</text>
+        <ellipse cx="280" cy="220" rx="215" ry="140" fill="#eaf2f8" stroke="#1a5276" stroke-width="3" stroke-dasharray="8 6"/>
+        <text x="280" y="128" font-size="19" fill="#1a5276" text-anchor="middle">L₁·L₂가 M∗과 같은 모델들</text>
+        <circle cx="190" cy="235" r="34" fill="#1e8449"/><text x="190" y="244" font-size="28" fill="#fff" text-anchor="middle">M∗</text>
+        <circle cx="390" cy="235" r="34" fill="#8a1538"/><text x="390" y="244" font-size="28" fill="#fff" text-anchor="middle">M</text>
+        <line x1="228" y1="235" x2="352" y2="235" stroke="#555" stroke-width="3" stroke-dasharray="3 6"/>
+        <text x="290" y="220" font-size="20" fill="#555" text-anchor="middle">∼₁, ∼₂ 같음</text>
+        <text x="290" y="268" font-size="20" fill="#8a1538" text-anchor="middle">L₃ 다름 (≁₃)</text>
+        <text x="190" y="292" font-size="18" fill="#1e8449" text-anchor="middle">참 모델</text>
+        <text x="390" y="292" font-size="18" fill="#8a1538" text-anchor="middle">CHT의 출력</text>
+      </svg>
+    </div>
+    <div class="col grow" style="gap:12px;justify-content:center">
+      <div class="chk"><div class="m" style="background:var(--blue)">✓</div>M∗ ∼₁ M : L₁ 값이 모두 같다</div>
+      <div class="chk"><div class="m" style="background:var(--teal)">✓</div>M∗ ∼₂ M : L₂ 값도 모두 같다</div>
+      <div class="chk"><div class="m" style="background:var(--wine)">✗</div>M∗ ≁₃ M : L₃ 값은 다르다</div>
+      <div class="card orange"><span class="tag">그래서</span><p>L₁·L₂ 데이터를 아무리 많이 모아도 M∗과 M을 구별할 수 없고, 둘은 L₃ 질문에 정반대로 답할 수 있다</p></div>
+    </div>
+  </div>
+  <div class="banner dark">비형식 CHT: 거의 모든 SCM에서 PCH는 붕괴하지 않는다 (붕괴하는 SCM은 측도 0)</div>
+</div></body></html>

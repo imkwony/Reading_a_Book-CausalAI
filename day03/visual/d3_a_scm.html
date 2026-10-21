@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.node{display:flex;flex-direction:column;justify-content:center}
+.eq{font-family:'Times New Roman','Noto Serif CJK KR',serif;font-size:30px;font-weight:700;text-align:center;padding:6px 0}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">SCM = ⟨U, V, F, P(U)⟩: 현실을 잘라 낸 모델<small>밖에서 정해지는 것(U), 안에서 정해지는 것(V), 그 사이의 규칙(F), 밖의 불확실성(P(U))</small></div>
+  <div class="row">
+    <div class="card purple dashed grow node"><span class="tag">U · 외생 변수</span><h3>모델 밖에서 정해짐</h3><p>환자, 학생, 고객 같은 개체의 '타고난 상태'. 관측되지 않는 요인들</p><p class="sub">P(U)가 그 분포(모집단)를 요약</p></div>
+    <div class="arrow">→</div>
+    <div class="card purple grow node"><span class="tag">F · 메커니즘</span><div class="eq">v<sub>i</sub> ← f<sub>i</sub>(pa<sub>i</sub>, u<sub>i</sub>)</div><p>각 변수를 부모 변수(pa)와 외생 요인(u)으로 계산하는 규칙. 개입하기 전에는 바뀌지 않는다</p></div>
+    <div class="arrow">→</div>
+    <div class="card gray grow node"><span class="tag">V · 내생 변수</span><h3>모델 안에서 정해짐</h3><p>V<sub>1</sub>, …, V<sub>n</sub>. 우리가 관측하는 변수들 (치료, 증상, 결과 …)</p><p class="sub">U와 다른 V로부터 값이 결정됨</p></div>
+  </div>
+  <div class="row">
+    <div class="card blue grow"><span class="tag">가정 1</span><p>V는 유한하고 모델은 재귀적(순환 없음)이다. F는 U를 V로 보내는 하나의 사상</p></div>
+    <div class="card teal grow"><span class="tag">가정 2</span><p>책은 U끼리의 의존과 공유 부모를 허용한다 (반 마르코프, semi-Markovian)</p></div>
+  </div>
+  <div class="banner dark">모든 모델은 현실의 한 조각이다. 조각 밖의 세계는 P(U)라는 요약으로만 들어온다</div>
+</div></body></html>

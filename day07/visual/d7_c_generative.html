@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.chain{display:flex;flex-direction:column;gap:8px}
+.chain .c{background:var(--blue-bg);border:2.5px solid var(--blue);border-radius:10px;padding:8px 14px;font-size:21px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.chain .c span{font-size:19px;color:var(--gray);font-weight:600}
+.chain .c.last{background:var(--wine-bg);border-color:var(--wine)}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">모든 변이는 두 단계 생성 과정에서 나온다<small>① 모집단에서 단위(unit) u를 뽑고 → ② 그 u가 메커니즘들을 인과 순서대로 통과해 V의 값이 정해진다 (그림 3.5)</small></div>
+  <div class="row">
+    <div class="card blue grow"><span class="tag">① 표집 단계 · P(U)</span><h3>누가 뽑히는가 (모집단 쪽)</h3>
+      <div class="chain">
+        <div class="c">E = {} → P(u)<span>무작위로 한 명</span></div>
+        <div class="c">E = {Z=z} → P(u∣z)<span>특성이 z인 집단</span></div>
+        <div class="c">E = {X=x, Z=z}<span>x를 택하는 경향까지</span></div>
+        <div class="c">E = {X=x, Z=z, Y=y}<span>결과까지 본 집단</span></div>
+        <div class="c last">u를 아는 경우: δ_u<span>개인 한 명</span></div>
+      </div>
+      <p class="sub">증거 E가 구체적일수록 더 좁은 하위집단이 선택된다</p></div>
+    <div class="arrow">→</div>
+    <div class="card teal grow"><span class="tag">② 평가 단계 · F_exec</span><h3>어떻게 결과가 되는가 (메커니즘 쪽)</h3>
+      <p><b>F_exec = F</b> : 자연 그대로 → 관측 분포 (L1)</p>
+      <p><b>F_exec = F<sub>X=x</sub></b> : X를 상수로 고정 → 개입 분포 (L2)</p>
+      <p><b>여러 F<sub>x</sub>, …, F<sub>w</sub></b> : 여러 세계를 함께 → 반사실 (L3)</p>
+      <p class="sub">u가 정해지면 우연성은 사라지고 결과가 결정된다</p></div>
+  </div>
+  <div class="banner dark">자료의 어떤 차이든 "어떤 단위들이 뽑혔나" 또는 "어떤 메커니즘을 거쳤나" 둘 중 하나에서 온다</div>
+</div></body></html>

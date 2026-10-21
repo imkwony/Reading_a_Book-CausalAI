@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.rung{display:flex;gap:14px;align-items:stretch}
+.rung .lab{width:150px;border-radius:12px;color:#fff;font-size:26px;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.25;flex:none;padding:8px}
+.rung .lab small{font-size:19px;font-weight:700}
+.rung .body{flex:1}
+.side{width:70px;flex:none;background:linear-gradient(#7a4e9c,#8a1538,#0e6655,#1a5276);border-radius:12px;color:#fff;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;font-size:23px;font-weight:800;letter-spacing:2px}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">PCH의 양들은 SCM을 얼마나 '가까이' 보여 주나<small>위로 갈수록 인과적 설명력이 커진다 (그림 3.4). 예시 질문은 책의 것을 줄여 옮김</small></div>
+  <div class="row">
+    <div class="side">설명력 ↑</div>
+    <div class="col grow" style="gap:12px">
+      <div class="rung"><div class="lab" style="background:var(--purple)">SCM M∗<small>완전한 이해</small></div>
+        <div class="card purple body"><p>F와 P(U)를 모두 안다 → 어떤 층의 양이든 계산 (물리학이 여기에 가깝다)</p></div></div>
+      <div class="rung"><div class="lab" style="background:var(--wine)">L3<small>반사실</small></div>
+        <div class="card wine body"><p>"제인이 폐암에 걸린 것은 흡연 때문인가?" "ACME의 폐수가 산호를 죽였나?"</p><p class="sub">특정 부분집단·개별 상황까지 좁혀 책임·설명의 의미를 준다</p></div></div>
+      <div class="rung"><div class="lab" style="background:var(--teal)">L2<small>개입</small></div>
+        <div class="card teal body"><p>"아스피린이 두통을 줄이는가?" "새 기능이 참여도를 높이는가?"</p><p class="sub">허위 연관을 걷어낸 평균 효과. 그래도 모집단 전체에 대한 말이다</p></div></div>
+      <div class="rung"><div class="lab" style="background:var(--blue)">L1<small>연관</small></div>
+        <div class="card blue body"><p>"소방관 수는 불의 크기에 대해 무엇을 알려 주나?" "기압계 눈금은 비에 대해?"</p><p class="sub">예측에는 유용하지만 인과와 비인과 정보가 섞여 있다</p></div></div>
+    </div>
+  </div>
+  <div class="banner warn">소방관을 줄인다고 불이 줄지 않고, 기압계를 올린다고 날씨가 좋아지지 않는다: L1 정보를 개입으로 읽으면 안 된다</div>
+</div></body></html>

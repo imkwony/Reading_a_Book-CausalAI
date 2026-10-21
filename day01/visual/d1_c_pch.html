@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.rung{display:grid;grid-template-columns:230px 1fr 1fr;gap:16px;align-items:center;border:3px solid;border-radius:14px;padding:14px 18px}
+.rung .lv{font-size:28px;font-weight:800;line-height:1.2}
+.rung .lv small{display:block;font-size:20px;font-weight:700}
+.rung .q{font-size:22px;font-weight:700;line-height:1.35}
+.rung .ex{font-size:21px;font-weight:600;color:var(--gray);line-height:1.35}
+.rung .f{font-family:'Times New Roman',serif;font-size:24px;font-weight:700;margin-top:4px;display:block}
+.r3{background:var(--wine-bg);border-color:var(--wine);color:var(--wine)} .r2{background:var(--teal-bg);border-color:var(--teal);color:var(--teal)} .r1{background:var(--blue-bg);border-color:var(--blue);color:var(--blue)}
+.rung .q,.rung .ex{color:var(--dark)} .rung .ex{color:var(--gray)}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">인과 사다리(PCH): 보기 · 하기 · 상상하기<small>같은 SCM이 만들어 내는 세 종류의 질문</small></div>
+  <div class="rung r3"><div class="lv">L3 반사실<small>상상하기 · Imagining</small></div>
+    <div class="q">"그때 다르게 했다면?"<span class="f">P(y<sub>x</sub> | x′, y′)</span></div>
+    <div class="ex">아스피린 때문에 두통이 나았나?<br>기계학습 대응: (표에 없음)</div></div>
+  <div class="varrow" style="text-align:center;font-size:28px;color:var(--gray);font-weight:800">▲ 더 많은 정보가 필요</div>
+  <div class="rung r2"><div class="lv">L2 개입<small>하기 · Doing</small></div>
+    <div class="q">"내가 하면 어떻게 될까?"<span class="f">P(y | do(x), c)</span></div>
+    <div class="ex">아스피린을 먹으면 두통이 나을까?<br>기계학습 대응: 강화학습</div></div>
+  <div class="rung r1"><div class="lv">L1 관찰<small>보기 · Seeing</small></div>
+    <div class="q">"무엇이 관찰되는가?"<span class="f">P(y | x)</span></div>
+    <div class="ex">이 증상은 병에 대해 무엇을 알려주나?<br>기계학습 대응: 지도·비지도 학습</div></div>
+  <div class="banner warn">하위 층의 데이터만으로는 상위 층 질문에 답할 수 없다. 계산을 더 오래 돌려도, 데이터를 더 모아도 마찬가지다.</div>
+</div></body></html>

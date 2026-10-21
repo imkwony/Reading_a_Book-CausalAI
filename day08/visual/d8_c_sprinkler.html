@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.n{fill:#fff;stroke:#111;stroke-width:3}.nt{font-size:21px;font-weight:800;text-anchor:middle;dominant-baseline:central;font-family:'Noto Sans CJK KR'}
+.e{stroke:#111;stroke-width:3;fill:none;marker-end:url(#ar)}
+.p1{stroke:var(--teal);stroke-width:5;fill:none;marker-end:url(#ag)}.p2{stroke:var(--orange);stroke-width:5;fill:none;stroke-dasharray:9 6;marker-end:url(#ao)}
+.f{font-family:'Times New Roman','Noto Serif CJK KR',serif;font-size:24px;font-weight:700;line-height:1.5}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">스프링클러 예 (예 4.3): 보는 것과 하는 것의 차이<small>계절(Se) → 스프링클러(Sp), 비(Ra) → 젖음(We) (미끄러움 Sl은 도식에서 생략)</small></div>
+  <div class="row">
+    <div class="card gray" style="flex:none;width:420px"><span class="tag">인과 다이어그램 G</span>
+      <svg viewBox="0 0 380 260" width="380" height="260" style="align-self:center"><defs>
+      <marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
+      <marker id="ag" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0e6655"/></marker>
+      <marker id="ao" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#d35400"/></marker></defs>
+      <path class="p2" d="M160,36 L90,92"/><path class="p2" d="M220,36 L290,92"/>
+      <path class="p2" d="M85,134 L160,208" style="display:none"/>
+      <path class="p1" d="M92,140 L152,200"/><path class="p2" d="M288,140 L228,200"/>
+      <ellipse class="n" cx="190" cy="26" rx="46" ry="22"/><text class="nt" x="190" y="26">Se</text>
+      <ellipse class="n" cx="70" cy="116" rx="46" ry="24"/><text class="nt" x="70" y="116">Sp</text>
+      <ellipse class="n" cx="310" cy="116" rx="46" ry="24"/><text class="nt" x="310" y="116">Ra</text>
+      <ellipse class="n" cx="190" cy="214" rx="46" ry="22"/><text class="nt" x="190" y="214">We</text>
+      </svg>
+      <p class="sub"><span style="color:var(--teal);font-weight:800">━ p1</span> 직접 경로 Sp→We · <span style="color:var(--orange);font-weight:800">┄ p2</span> 뒷문 경로 Sp←Se→Ra→We</p></div>
+    <div class="col grow">
+      <div class="card blue"><span class="tag">Q1 · 보았을 때 P(We∣Sp=on)</span>
+        <div class="f">= Σ<sub>se,ra</sub> P(we∣on,ra) P(on∣se) P(ra∣se) P(se) / Σ<sub>se</sub> P(on∣se) P(se)</div>
+        <p>스프링클러가 켜진 것을 <b>보면 계절도 추론</b>된다 → 비 확률도 바뀜. 비공식적으로 <b>p1 + p2</b></p></div>
+      <div class="card teal"><span class="tag">Q2 · 했을 때 P(We∣do(Sp=on))</span>
+        <div class="f">= Σ<sub>se,ra</sub> P(we∣on,ra) P(ra∣se) P(se)</div>
+        <p>내가 켜면 Se→Sp 연결이 끊겨 <b>계절 추론 경로가 사라진다</b>. 비공식적으로 <b>p1만</b></p></div>
+    </div>
+  </div>
+  <div class="banner warn">Q1과 Q2의 차이 = Sp→We를 제외한 우회 경로 p2가 만드는 값 = 교란(confounding) 편향</div>
+</div></body></html>

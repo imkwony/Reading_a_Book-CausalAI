@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.cols .card{padding:12px 14px}.cols .card p{font-size:20px}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">LTF와 EM 트릭: 보이지 않는 U를 지울 수 있는가<small>개입 분포를 U까지 풀어 쓴 뒤(LTF), U가 사라지는지 따져 본다 (4.2.5절)</small></div>
+<div class="card purple"><span class="tag">EM 트릭 · Lemma 4.2.13</span><p class="eq">Σ<sub>uᵢ</sub> P(vᵢ ∣ paᵢ, uᵢ) P(uᵢ) = P(vᵢ ∣ paᵢ)</p><p class="sub">조건: Uᵢ가 Vᵢ 하나에만 영향을 준다 = 독립된 잡음은 함수 안에 흡수된다</p></div>
+<div class="cols">
+ <div class="card green"><span class="tag">경우 1 · Z 관측</span><svg xmlns="http://www.w3.org/2000/svg" width="300" height="170" viewBox="0 0 300 170" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M128.8,56.2 L71.2,113.8" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M171.2,56.2 L228.8,113.8" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M80.0,135.0 L220.0,135.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="150" cy="35" r="24" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="150" y="43.4" text-anchor="middle" font-size="24" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="50" cy="135" r="24" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="50" y="143.4" text-anchor="middle" font-size="24" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="250" cy="135" r="24" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="250" y="143.4" text-anchor="middle" font-size="24" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg>
+  <p>U가 모두 한 변수에만 영향 → EM 트릭으로 전부 소거</p><p class="eq">P(y∣do(x)) = Σ<sub>z</sub> P(y∣x,z)P(z)</p><p class="sub">= 백도어 조정식 (식 4.65)</p></div>
+ <div class="card wine"><span class="tag">경우 2 · U<sub>xy</sub> 미관측</span><svg xmlns="http://www.w3.org/2000/svg" width="300" height="170" viewBox="0 0 300 170" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M128.8,56.2 L71.2,113.8" fill="none" stroke="#d35400" stroke-width="4" marker-end="url(#mo)"/>
+<path d="M171.2,56.2 L228.8,113.8" fill="none" stroke="#d35400" stroke-width="4" marker-end="url(#mo)"/>
+<path d="M80.0,135.0 L220.0,135.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="150" cy="35" r="24" fill="#f1ebf7" stroke="#7a4e9c" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="150" y="43.4" text-anchor="middle" font-size="24" font-weight="800" fill="#7a4e9c" font-family="Times New Roman,Noto Serif CJK KR,serif">U<tspan font-size="16" dy="6">xy</tspan></text>
+<circle cx="50" cy="135" r="24" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="50" y="143.4" text-anchor="middle" font-size="24" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="250" cy="135" r="24" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="250" y="143.4" text-anchor="middle" font-size="24" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg>
+  <p>U<sub>xy</sub>가 X·Y에 모두 영향 → EM 트릭 불가(X와 독립이 아님)</p><p class="eq">Σ<sub>u<sub>xy</sub></sub> P(y∣x,u<sub>xy</sub>)P(u<sub>xy</sub>)</p><p class="sub">U가 남아 이 방법으로는 식별 안 됨 (식 4.72)</p></div>
+ <div class="card teal"><span class="tag">경우 3 · 매개 Z 관측</span><svg xmlns="http://www.w3.org/2000/svg" width="300" height="170" viewBox="0 0 300 170" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M128.8,46.2 L61.2,113.8" fill="none" stroke="#d35400" stroke-width="4" marker-end="url(#mo)"/>
+<path d="M171.2,46.2 L238.8,113.8" fill="none" stroke="#d35400" stroke-width="4" marker-end="url(#mo)"/>
+<path d="M70.0,135.0 L120.0,135.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M180.0,135.0 L230.0,135.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="150" cy="25" r="24" fill="#f1ebf7" stroke="#7a4e9c" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="150" y="33.4" text-anchor="middle" font-size="24" font-weight="800" fill="#7a4e9c" font-family="Times New Roman,Noto Serif CJK KR,serif">U<tspan font-size="16" dy="6">xy</tspan></text>
+<circle cx="40" cy="135" r="24" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="143.4" text-anchor="middle" font-size="24" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="150" cy="135" r="24" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="150" y="143.4" text-anchor="middle" font-size="24" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="260" cy="135" r="24" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="260" y="143.4" text-anchor="middle" font-size="24" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg>
+  <p>U<sub>xy</sub>가 남지만 그래프가 주는 독립성으로 소거</p><p class="eq">Y⫫X∣Z,U<sub>xy</sub> · Z⫫U<sub>xy</sub>∣X</p><p class="sub">→ 프론트도어 식 (식 4.80–4.88)</p></div>
+</div>
+<div class="banner dark">핵심: U를 '관측할 수 없다'는 것과 '식에서 지울 수 없다'는 것은 다르다. 그래프가 주는 독립 가정이 U를 지워 준다</div>
+</div></body></html>

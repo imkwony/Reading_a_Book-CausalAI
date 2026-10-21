@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.three svg{width:100%;height:auto}.three .card>div>div{min-width:0}.three .card p{font-size:20px}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">개입 세계의 세 가지 추론 패턴<small>do-calculus의 재료: 개입한 그래프에서 읽은 분리가 개입 분포의 등식이 된다 (4.3.1절)</small></div>
+<div class="three">
+<div class="card blue" style="padding:12px 14px"><span class="tag">패턴 1</span><h3>관측을 넣고 빼기</h3>
+<div style="display:flex;gap:2px"><div style="flex:1"><p class="sub" style="text-align:center">원래 그래프 G</p><svg xmlns="http://www.w3.org/2000/svg" width="240" height="175" viewBox="0 0 240 175" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M40.0,56.0 L40.0,104.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M66.0,130.0 L174.0,130.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M62.7,142.7 Q120.0,175.0 177.3,142.7" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<circle cx="40" cy="30" r="20" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="40" y="37.0" text-anchor="middle" font-size="20" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="40" cy="130" r="20" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="200" cy="130" r="20" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="200" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg></div><div style="flex:1"><p class="sub" style="text-align:center">개입 후 (점선 = 제거)</p><svg xmlns="http://www.w3.org/2000/svg" width="240" height="175" viewBox="0 0 240 175" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M40.0,56.0 L40.0,104.0" fill="none" stroke="#bbb" stroke-width="3" stroke-dasharray="3 6" marker-end="url(#mg)"/>
+<path d="M66.0,130.0 L174.0,130.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="40" cy="30" r="20" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="40" y="37.0" text-anchor="middle" font-size="20" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="40" cy="130" r="20" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="200" cy="130" r="20" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="200" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg></div></div>
+<p>개입한 그래프에서 Z와 Y가 분리됨</p><p class="eq">P(y∣do(x), z) = P(y∣do(x))</p><p class="sub">관측 Z는 개입 아래에서 Y와 무관</p></div>
+<div class="card teal" style="padding:12px 14px"><span class="tag">패턴 2</span><h3>관측과 개입 바꾸기</h3>
+<div style="display:flex;gap:2px"><div style="flex:1"><p class="sub" style="text-align:center">원래 그래프 G</p><svg xmlns="http://www.w3.org/2000/svg" width="240" height="175" viewBox="0 0 240 175" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M103.8,50.3 L56.2,109.7" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M136.2,50.3 L183.8,109.7" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M66.0,130.0 L174.0,130.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="120" cy="30" r="20" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="120" y="37.0" text-anchor="middle" font-size="20" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="40" cy="130" r="20" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="200" cy="130" r="20" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="200" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg></div><div style="flex:1"><p class="sub" style="text-align:center">개입 후 (점선 = 제거)</p><svg xmlns="http://www.w3.org/2000/svg" width="240" height="175" viewBox="0 0 240 175" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M103.8,50.3 L56.2,109.7" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M136.2,50.3 L183.8,109.7" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<path d="M66.0,130.0 L174.0,130.0" fill="none" stroke="#bbb" stroke-width="3" stroke-dasharray="3 6" marker-end="url(#mg)"/>
+<circle cx="120" cy="30" r="20" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="120" y="37.0" text-anchor="middle" font-size="20" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="40" cy="130" r="20" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="200" cy="130" r="20" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="200" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg></div></div>
+<p>Z가 X의 백도어를 모두 막음</p><p class="eq">P(y∣do(x), z) = P(y∣x, z)</p><p class="sub">Z가 주어지면 보기와 하기가 같다</p></div>
+<div class="card wine" style="padding:12px 14px"><span class="tag">패턴 3</span><h3>개입을 넣고 빼기</h3>
+<div style="display:flex;gap:2px"><div style="flex:1"><p class="sub" style="text-align:center">원래 그래프 G</p><svg xmlns="http://www.w3.org/2000/svg" width="240" height="175" viewBox="0 0 240 175" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M103.8,50.3 L56.2,109.7" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M136.2,50.3 L183.8,109.7" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M66.0,130.0 L174.0,130.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="120" cy="30" r="20" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="120" y="37.0" text-anchor="middle" font-size="20" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="40" cy="130" r="20" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="200" cy="130" r="20" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="200" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg></div><div style="flex:1"><p class="sub" style="text-align:center">개입 후 (점선 = 제거)</p><svg xmlns="http://www.w3.org/2000/svg" width="240" height="175" viewBox="0 0 240 175" style="display:block;margin:0 auto">
+<defs>
+<marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4e9c"/></marker>
+<marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bbb"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+</defs>
+<path d="M103.8,50.3 L56.2,109.7" fill="none" stroke="#bbb" stroke-width="3" stroke-dasharray="3 6" marker-end="url(#mg)"/>
+<path d="M136.2,50.3 L183.8,109.7" fill="none" stroke="#7a4e9c" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#mp)" marker-start="url(#mp)"/>
+<path d="M66.0,130.0 L174.0,130.0" fill="none" stroke="#333" stroke-width="3.2" marker-end="url(#md)"/>
+<circle cx="120" cy="30" r="20" fill="#eaf2f8" stroke="#1a5276" stroke-width="3"/>
+<text x="120" y="37.0" text-anchor="middle" font-size="20" font-weight="800" fill="#1a5276" font-family="Times New Roman,Noto Serif CJK KR,serif">Z</text>
+<circle cx="40" cy="130" r="20" fill="#e8f6f3" stroke="#0e6655" stroke-width="3"/>
+<text x="40" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#0e6655" font-family="Times New Roman,Noto Serif CJK KR,serif">X</text>
+<circle cx="200" cy="130" r="20" fill="#f4f4f4" stroke="#111" stroke-width="3"/>
+<text x="200" y="137.0" text-anchor="middle" font-size="20" font-weight="800" fill="#111" font-family="Times New Roman,Noto Serif CJK KR,serif">Y</text>
+</svg></div></div>
+<p>X에서 Z로 가는 인과 경로가 없음</p><p class="eq">P(z∣do(x)) = P(z)</p><p class="sub">Z는 X를 건드려도 변하지 않는다</p></div>
+</div>
+<div class="banner warn">조심: 패턴 2의 주변 버전 P(y∣do(x)) = P(y∣x)는 성립하지 않는다. Z→X가 있으면 가중치가 P(z)와 P(z∣x)로 달라진다 (식 4.106 대 4.107)</div>
+</div></body></html>

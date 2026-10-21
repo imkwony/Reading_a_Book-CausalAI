@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"></head><body>
+<div class="slide-visual">
+  <div class="hdr">예시 3: Colored MNIST — 층마다 생성이 달라진다<small>숫자(D)와 색(C)이 강하게 상관: 0은 빨갛고 5는 청록색에 가깝다</small></div>
+  <div class="row">
+    <div class="card blue grow"><span class="tag">L1 표본</span><h3>그냥 생성</h3><p>훈련 분포를 따라 이미지를 만든다. GAN·확산 모델도 잘함</p></div>
+    <div class="card blue grow"><span class="tag">L1 조건부</span><h3>P(이미지 | D=0)</h3><p>0이라는 조건에서 생성하면 빨간 0이 많이 나온다</p></div>
+    <div class="card teal grow"><span class="tag">L2 개입</span><h3>do(D=0)</h3><p>색과 숫자의 가짜 상관을 끊어, 모든 색의 0이 나와야 한다</p></div>
+    <div class="card wine grow"><span class="tag">L3 반사실</span><h3>5였던 것이 0이었다면</h3><p>원래 5의 청록색을 유지한 채 0으로 바뀌어야 한다</p></div>
+  </div>
+  <div class="row">
+    <div class="card gray grow"><h3>일반 방식(GAN 등)</h3><p>L1은 잘하지만 L2·L3에서 가짜 상관을 따라가 실패</p></div>
+    <div class="card green grow"><h3>인과 방식</h3><p>인과 구조를 반영해 L2·L3에서도 기대한 결과에 가까움</p></div>
+  </div>
+  <div class="banner dark">얼굴 편집 예(1.5): 나이만 바꿨는데 성별이 바뀌는 오류 = 데이터 속 나이·성별 상관을 따라갔기 때문</div>
+</div></body></html>

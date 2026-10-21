@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+table.t th,table.t td{font-size:20px;padding:7px 10px;text-align:center}
+.n{fill:#fff;stroke:#111;stroke-width:3}.nt{font-size:24px;font-weight:800;text-anchor:middle;dominant-baseline:central;font-family:'Noto Sans CJK KR'}
+.e{stroke:#111;stroke-width:3;fill:none;marker-end:url(#ar)}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">같은 숫자, 반대 처방: 심슨의 역설 (예 4.1, 4.2)<small>약(X)과 회복(Y)의 표는 같다. 달라지는 것은 Z가 무엇이냐, 곧 인과 이야기다</small></div>
+  <table class="t"><tr><th>회복률 (책 그림 4.2)</th><th>약 X=1</th><th>약 없음 X=0</th><th>약의 쪽</th></tr>
+  <tr><td>전체 (합친 표)</td><td>273/350 = 78%</td><td>289/350 = 83%</td><td style="color:var(--wine);font-weight:800">불리</td></tr>
+  <tr><td>남성 Z=0</td><td>81/87 = 93%</td><td>234/270 = 87%</td><td style="color:var(--green);font-weight:800">유리</td></tr>
+  <tr><td>여성 Z=1</td><td>192/263 = 73%</td><td>55/80 = 69%</td><td style="color:var(--green);font-weight:800">유리</td></tr></table>
+  <div class="row">
+    <div class="card teal grow"><span class="tag">예 4.1 · Z = 성별</span>
+      <svg viewBox="0 0 300 130" width="300" height="130" style="align-self:center"><defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker></defs>
+      <path class="e" d="M135,28 L75,82"/><path class="e" d="M175,24 L225,24" style="display:none"/><path class="e" d="M165,28 L225,82"/><path class="e" d="M100,105 L200,105"/>
+      <circle class="n" cx="150" cy="24" r="22"/><text class="nt" x="150" y="24">Z</text><circle class="n" cx="60" cy="105" r="22"/><text class="nt" x="60" y="105">X</text><circle class="n" cx="240" cy="105" r="22"/><text class="nt" x="240" y="105">Y</text></svg>
+      <p>성별은 약 복용과 회복 모두의 <b>공통 원인</b></p><p>→ 같은 성별끼리 비교하는 <b>층별 표</b>가 답</p></div>
+    <div class="card purple grow"><span class="tag">예 4.2 · Z = 투약 후 혈압</span>
+      <svg viewBox="0 0 300 130" width="300" height="130" style="align-self:center">
+      <path class="e" d="M85,30 L125,30" style="display:none"/><path class="e" d="M80,88 L132,40"/><path class="e" d="M168,40 L220,88"/><path class="e" d="M100,105 L200,105"/>
+      <circle class="n" cx="150" cy="24" r="22"/><text class="nt" x="150" y="24">Z</text><circle class="n" cx="60" cy="105" r="22"/><text class="nt" x="60" y="105">X</text><circle class="n" cx="240" cy="105" r="22"/><text class="nt" x="240" y="105">Y</text></svg>
+      <p>혈압은 약이 작용하는 <b>매개 경로</b></p><p>→ 쪼개면 약의 핵심 효과가 사라지니 <b>합친 표</b>가 답</p></div>
+  </div>
+  <div class="banner warn">어느 표를 볼지는 자료가 아니라 자료를 만든 메커니즘(그래프)이 정한다. 표본이 커도 해결되지 않는다</div>
+</div></body></html>

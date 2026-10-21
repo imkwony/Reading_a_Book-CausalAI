@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.f{font-family:'Times New Roman','Noto Serif CJK KR',serif;font-size:26px;font-weight:700;text-align:center;line-height:1.5}
+.pill{display:flex;gap:10px}.pill div{flex:1;text-align:center;border-radius:12px;padding:12px;font-size:21px;font-weight:700;color:#fff}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">식별가능성: 그래프와 자료만으로 L2 답이 하나로 정해지는가<small>정의 4.2.1 · 그림 4.7, 4.8</small></div>
+  <div class="row">
+    <div class="card purple grow"><span class="tag">보이지 않는 SCM들</span>
+      <p>같은 인과 다이어그램 G를 가진 두 모델 M⁽¹⁾, M⁽²⁾</p>
+      <div class="f">P⁽¹⁾(v) = P⁽²⁾(v) &gt; 0</div>
+      <p class="sub">관측 분포가 똑같다 (자료로는 구분 불가)</p></div>
+    <div class="arrow">⇒</div>
+    <div class="card teal grow"><span class="tag">그렇다면 반드시</span>
+      <div class="f">P⁽¹⁾(y∣do(x),z) = P⁽²⁾(y∣do(x),z)</div>
+      <p class="sub">개입 분포도 똑같아야 '식별 가능'. 하나라도 어긋나는 쌍이 있으면 식별 불가능</p></div>
+  </div>
+  <div class="card gray"><span class="tag">그래프 종류별 식별 가능성 (그림 4.7)</span>
+    <div class="pill"><div style="background:var(--green)">마르코프 모델<br>(관측 안 되는 공통 원인 없음)<br>항상 식별 가능</div><div style="background:var(--orange)">준마르코프 모델<br>(숨은 공통 원인 있음)<br>경우에 따라 가능</div><div style="background:var(--gray)">그래프 가정 없이 L1 자료만<br><br>개입·반사실은 일반적으로 불가능</div></div></div>
+  <div class="banner dark">'식별 가능' = 자료가 아무리 많아도 그래프가 허용하는 모델들 사이에서 답이 갈리지 않는다는 뜻 (표본 크기와 무관)</div>
+</div></body></html>

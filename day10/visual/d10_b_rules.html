@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>.ov{text-decoration:overline}.un{text-decoration:underline}.eq{font-family:"Times New Roman","Noto Serif CJK KR",serif;font-size:22px;font-weight:700}.rule{display:grid;grid-template-columns:200px 1fr 1fr;gap:14px;align-items:center;border:3px solid;border-radius:14px;padding:12px 16px}.rule .nm{font-size:27px;font-weight:800;line-height:1.2}.rule .nm small{display:block;font-size:20px;font-weight:700}.rule p{font-size:21px;font-weight:600;line-height:1.4;color:var(--dark)}.r1{background:var(--blue-bg);border-color:var(--blue);color:var(--blue)}.r2{background:var(--teal-bg);border-color:var(--teal);color:var(--teal)}.r3{background:var(--wine-bg);border-color:var(--wine);color:var(--wine)}</style></head><body>
+<div class="slide-visual">
+<div class="hdr">do-calculus의 세 규칙 (Thm 4.3.1)<small>모든 규칙은 "특정 그래프에서 Y⫫Z∣X,W 이면 등식이 성립한다"는 형태</small></div>
+<div class="rule r1"><div class="nm">규칙 1<small>관측 넣기/빼기</small></div>
+ <div><p class="eq">P(y∣do(x), z, w) = P(y∣do(x), w)</p><p>조건: G<sub><span class="ov">X</span></sub>에서 Y⫫Z∣X,W</p></div><p>개입 아래 조건부 독립을 읽는 d-분리의 확장</p></div>
+<div class="rule r2"><div class="nm">규칙 2<small>do ↔ see 교환</small></div>
+ <div><p class="eq">P(y∣do(x), do(z), w) = P(y∣do(x), z, w)</p><p>조건: G<sub><span class="ov">X</span><span class="un">Z</span></sub>에서 Y⫫Z∣X,W</p></div><p>남은 연관이 모두 인과 경로뿐이면 보기=하기 (백도어의 일반화)</p></div>
+<div class="rule r3"><div class="nm">규칙 3<small>do 넣기/빼기</small></div>
+ <div><p class="eq">P(y∣do(x), do(z), w) = P(y∣do(x), w)</p><p>조건: G<sub><span class="ov">XZ(W)</span></sub>에서 Y⫫Z∣X,W</p></div><p>do(Z)가 Y에 아무 영향이 없을 때 제거. Z(W)는 W의 조상이 아닌 Z 노드</p></div>
+<div class="row">
+ <div class="card gray grow"><span class="tag">그래프 표기</span><p>G<sub><span class="ov">X</span></sub> = X로 <b>들어오는</b> 화살표 제거 (do(X) 상태)</p><p>G<sub><span class="un">Z</span></sub> = Z에서 <b>나가는</b> 화살표 제거 (Z를 '관측만' 하는 상태)</p></div>
+ <div class="card orange grow"><span class="tag">규칙 3의 주의</span><p>W를 조건에 넣을 때는 W의 후손에 대한 개입이 W를 통해 새 경로를 만들 수 있어, W의 조상이 아닌 Z의 들어오는 화살표만 자른다 (그림 4.29)</p></div>
+</div>
+</div></body></html>

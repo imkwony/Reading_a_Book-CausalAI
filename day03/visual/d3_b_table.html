@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+table.m{border-collapse:collapse;font-size:20px;font-weight:600;text-align:center}
+table.m th{background:#111;color:#fff;padding:5px 10px;font-weight:700;font-size:20px}
+table.m td{padding:3px 10px;border-bottom:1.5px solid #ddd;height:33px}
+table.m td.p{text-align:right;font-variant-numeric:tabular-nums}
+table.m tr.x1 td{background:#eaf2f8}
+table.m tr.ct td{background:#fdf2f5;color:#8a1538;font-weight:800;border-top:2px solid #8a1538;border-bottom:2px solid #8a1538}
+table.m td.l2{border-left:1.5px solid #bbb} table.m th.l2h{background:#0e6655}
+.leg{font-size:20px;font-weight:600;color:var(--gray)} .leg i{display:inline-block;width:18px;height:18px;border-radius:4px;vertical-align:-3px;margin-right:6px}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">예 2.2의 SCM: 16개 외생 상태가 세 층을 모두 만든다<small>각 행 = U의 한 가지 값. 같은 표에서 L1 · L2 · L3 답을 전부 읽을 수 있다</small></div>
+  <div class="row" style="align-items:flex-start">
+    <div><table class="m"><tr><th>#</th><th>U<sub>r</sub></th><th>U<sub>z</sub></th><th>U<sub>x</sub></th><th>U<sub>y</sub></th><th>Z</th><th>X</th><th>Y</th><th class="l2h">Y<sub>X=1</sub></th><th class="l2h">Y<sub>X=0</sub></th><th>P(u)</th></tr>
+<tr class="x1"><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td class='l2'>0</td><td class='l2'>1</td><td class='p'>0.001125</td></tr>
+<tr class="x1"><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td class='l2'>0</td><td class='l2'>0</td><td class='p'>0.002625</td></tr>
+<tr class=""><td>3</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td class='l2'>0</td><td class='l2'>1</td><td class='p'>0.010125</td></tr>
+<tr class=""><td>4</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td class='l2'>0</td><td class='l2'>0</td><td class='p'>0.023625</td></tr>
+<tr class="x1"><td>5</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td class='l2'>0</td><td class='l2'>1</td><td class='p'>0.021375</td></tr>
+<tr class="x1"><td>6</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td class='l2'>0</td><td class='l2'>0</td><td class='p'>0.049875</td></tr>
+<tr class=""><td>7</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td class='l2'>0</td><td class='l2'>1</td><td class='p'>0.192375</td></tr>
+<tr class=""><td>8</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td class='l2'>0</td><td class='l2'>0</td><td class='p'>0.448875</td></tr>
+<tr class="x1"><td>9</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td class='l2'>1</td><td class='l2'>0</td><td class='p'>0.000375</td></tr>
+<tr class="x1"><td>10</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td class='l2'>1</td><td class='l2'>1</td><td class='p'>0.000875</td></tr>
+<tr class="ct"><td>11</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td class='l2'>1</td><td class='l2'>0</td><td class='p'>0.003375</td></tr>
+<tr class=""><td>12</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td class='l2'>1</td><td class='l2'>1</td><td class='p'>0.007875</td></tr>
+<tr class="ct"><td>13</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td class='l2'>1</td><td class='l2'>0</td><td class='p'>0.007125</td></tr>
+<tr class=""><td>14</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td class='l2'>1</td><td class='l2'>1</td><td class='p'>0.016625</td></tr>
+<tr class="x1"><td>15</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td class='l2'>1</td><td class='l2'>0</td><td class='p'>0.064125</td></tr>
+<tr class="x1"><td>16</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class='l2'>1</td><td class='l2'>1</td><td class='p'>0.149625</td></tr>
+</table>
+    <div class="leg" style="margin-top:8px"><i style="background:#eaf2f8"></i>X=1인 행 &nbsp; <i style="background:#fdf2f5;border:2px solid #8a1538"></i>X=0, Y=0, Y<sub>X=1</sub>=1인 행 (11, 13)</div></div>
+    <div class="col grow" style="gap:12px">
+      <div class="card blue"><span class="tag">L1 · 보기</span><p>X=1인 행의 확률을 모으면 P(X=1) = 0.29, 그중 Y=1인 행(9, 10, 15, 16)은 0.215</p><p class="mono">P(Y=1∣X=1) = 0.215 / 0.29 = 0.7414</p></div>
+      <div class="card teal"><span class="tag">L2 · 하기</span><p>Y<sub>X=1</sub> 열이 1인 행의 확률 합 (= U<sub>r</sub>=1인 행)</p><p class="mono">P(Y=1∣do(X=1)) = 0.25</p></div>
+      <div class="card wine"><span class="tag">L3 · 상상하기</span><p>실제 X=0, Y=0인 행(4, 8, 11, 13) 중 Y<sub>X=1</sub>=1인 행은 11, 13뿐</p><p class="mono">0.0105 / 0.483 = 0.0217</p></div>
+    </div>
+  </div>
+</div></body></html>

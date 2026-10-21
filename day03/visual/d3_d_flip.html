@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><link rel="stylesheet" href="_book_style.css"><style>
+.br{display:flex;align-items:center;gap:14px;font-size:21px;font-weight:700}
+.br .lab{width:300px}
+.br .track{flex:1;background:#eee;border-radius:8px;height:38px;position:relative}
+.br .fill{height:38px;border-radius:8px;color:#fff;font-size:21px;font-weight:800;display:flex;align-items:center;justify-content:flex-end;padding-right:10px}
+.diff{font-size:32px;font-weight:800;text-align:center;padding:8px;border-radius:10px}
+</style></head><body>
+<div class="slide-visual">
+  <div class="hdr">약은 도움이 되는가? 보기와 하기의 답이 반대로 나온다<small>예 2.5: 같은 SCM에서 두 층의 질문을 계산한 결과 (생존 확률)</small></div>
+  <div class="row">
+    <div class="card blue grow" style="gap:14px"><span class="tag">L1 · 약을 먹은 사람을 본다</span>
+      <div class="br"><div class="lab">P(Y=1∣X=1)</div><div class="track"><div class="fill" style="width:74%;background:#1a5276">0.74</div></div></div>
+      <div class="br"><div class="lab">P(Y=1∣X=0)</div><div class="track"><div class="fill" style="width:32%;background:#1a5276">0.32</div></div></div>
+      <div class="diff" style="background:#d6e6f2;color:#1a5276">차이 ≈ +0.42 → "약이 좋아 보임"</div></div>
+    <div class="card teal grow" style="gap:14px"><span class="tag">L2 · 모두에게 약을 준다</span>
+      <div class="br"><div class="lab">P(Y=1∣do(X=1))</div><div class="track"><div class="fill" style="width:25%;background:#0e6655">0.25</div></div></div>
+      <div class="br"><div class="lab">P(Y=1∣do(X=0))</div><div class="track"><div class="fill" style="width:40%;background:#0e6655">0.40</div></div></div>
+      <div class="diff" style="background:#d3efe8;color:#0e6655">차이 = −0.15 → "약이 해로움"</div></div>
+  </div>
+  <div class="row">
+    <div class="card orange grow"><span class="tag">왜 뒤집히나</span><p>의사들은 증상(Z=1)이 있는 사람에게 약을 처방한다. 약을 먹은 집단에는 저항력(U<sub>r</sub>=1) 환자가 많이 섞여 있어 L1의 비교가 왜곡된다</p></div>
+  </div>
+  <div class="banner dark">관측 자료(L1)는 흔하지만, 알고 싶은 것은 개입의 효과(L2)인 경우가 많다</div>
+</div></body></html>
